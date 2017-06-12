@@ -1,4 +1,3 @@
-
 CREATE DATABASE BIBLIOTECA;
 USE BIBLIOTECA;
 
@@ -29,11 +28,11 @@ CREATE TABLE Funcionarios
 
 CREATE TABLE Clientes
 (
-	Id_Cliente                         INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	Nome_Cliente                       VARCHAR(100) NOT NULL,
-	Endereco_Cliente                   VARCHAR(50) NOT NULL,
-	Cidade_Cliente                     VARCHAR(50) NOT NULL,
-	Estado_Cliente                     VARCHAR(30) NOT NULL,
-	Telefone_Cliente                   VARCHAR(20) NOT NULL,
-	Status_Cliente                     CHAR(1) NOT NULL
+	Id_Cliente INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	Nome_Cliente VARCHAR(100) NOT NULL,
+	Endereco_Cliente VARCHAR(50) NOT NULL,
+	Cidade_Cliente VARCHAR(50) NOT NULL,
+	Estado_Cliente  VARCHAR(30) NOT NULL,
+	Telefone_Cliente VARCHAR(20) NOT NULL,
+	Status_Cliente CHAR(1) NOT NULL
 );
