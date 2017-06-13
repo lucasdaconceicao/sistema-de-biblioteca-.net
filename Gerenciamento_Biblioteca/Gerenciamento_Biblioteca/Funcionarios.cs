@@ -8,15 +8,117 @@ namespace Gerenciamento_Biblioteca
 {
     class Funcionarios
     {
-        private string nome;
-        private string endereco;
-        private string cidade;
-        private string estado;
-        private string telefone;
-        private string cargo;
-        private DateTime data_admissao;
-        private DateTime data_demissao;
+        private string _nome;
+        private string _endereco;
+        private string _cidade;
+        private string _estado;
+        private string _telefone;
+        private string _cargo;
+        private DateTime _data_admissao;
+        private DateTime _data_demissao;
 
+        public string Nome
+        {
+            get
+            {
+                return _nome;
+            }
 
+            set
+            {
+                _nome = value;
+            }
+        }
+
+        public string Endereco
+        {
+            get
+            {
+                return _endereco;
+            }
+
+            set
+            {
+                _endereco = value;
+            }
+        }
+
+        public string Cidade
+        {
+            get
+            {
+                return _cidade;
+            }
+
+            set
+            {
+                _cidade = value;
+            }
+        }
+
+        public string Estado
+        {
+            get
+            {
+                return _estado;
+            }
+
+            set
+            {
+                _estado = value;
+            }
+        }
+
+        public string Telefone
+        {
+            get
+            {
+                return _telefone;
+            }
+
+            set
+            {
+                _telefone = value;
+            }
+        }
+
+        public string Cargo
+        {
+            get
+            {
+                return _cargo;
+            }
+
+            set
+            {
+                _cargo = value;
+            }
+        }
+
+        public DateTime Data_admissao
+        {
+            get
+            {
+                return _data_admissao;
+            }
+
+            set
+            {
+                _data_admissao = value;
+            }
+        }
+
+        public DateTime Data_demissao
+        {
+            get
+            {
+                return _data_demissao;
+            }
+
+            set
+            {
+                _data_demissao = value;
+            }
+        }
     }
 }
