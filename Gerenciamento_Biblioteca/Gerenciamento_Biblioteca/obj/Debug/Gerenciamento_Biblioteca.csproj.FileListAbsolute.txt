@@ -10,3 +10,10 @@ c:\users\lucas\documents\visual studio 2015\Projects\Gerenciamento_Biblioteca\Ge
 C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\bin\Debug\Gerenciamento_Biblioteca.exe.config
 C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.exe
 C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.pdb
+C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\bin\Debug\Gerenciamento_Biblioteca.exe
+C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\bin\Debug\Gerenciamento_Biblioteca.pdb
+C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.csprojResolveAssemblyReference.cache
+C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.Frm_Clientes.resources
+C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.Frm_Principal.resources
+C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.Properties.Resources.resources
+C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.csproj.GenerateResource.Cache
