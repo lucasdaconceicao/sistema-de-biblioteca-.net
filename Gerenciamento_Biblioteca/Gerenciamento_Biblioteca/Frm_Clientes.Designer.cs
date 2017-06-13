@@ -113,6 +113,7 @@
             this.tsbtnSair.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.tsbtnSair.Size = new System.Drawing.Size(57, 52);
             this.tsbtnSair.Text = "toolStripButton5";
+            this.tsbtnSair.Click += new System.EventHandler(this.tsbtnSair_Click);
             // 
             // Frm_Clientes
             // 
@@ -142,8 +143,8 @@
         private System.Windows.Forms.ToolStripButton tsbtnAlterarExcluir;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton tsbtnSair;
-        public System.Windows.Forms.ToolStripButton tsbtnVoltar;
         private System.Windows.Forms.ToolStripButton tsbtnCadastrar;
         private System.Windows.Forms.ToolStripButton tsbtnConsultar;
+        private System.Windows.Forms.ToolStripButton tsbtnVoltar;
     }
 }

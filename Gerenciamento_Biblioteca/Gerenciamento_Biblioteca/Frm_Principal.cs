@@ -16,5 +16,14 @@ namespace Gerenciamento_Biblioteca
         {
             InitializeComponent();
         }
+
+        private void tsbtnSair_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Você tem certeza que deseja sair do sistema?", "Mensagem do Sistema",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

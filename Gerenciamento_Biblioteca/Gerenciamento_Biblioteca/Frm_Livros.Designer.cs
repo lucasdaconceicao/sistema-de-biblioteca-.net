@@ -1,6 +1,6 @@
 ﻿namespace Gerenciamento_Biblioteca
 {
-    partial class Frm_Principal
+    partial class Frm_Livros
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Principal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Livros));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tsbtnClientes = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnFuncionarios = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnLivros = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnAlterarExcluir = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnCadastrar = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnConsultar = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnVoltar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.tsbtnSair = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
@@ -43,42 +44,52 @@
             // 
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbtnClientes,
-            this.tsbtnFuncionarios,
-            this.tsbtnLivros});
+            this.tsbtnAlterarExcluir,
+            this.tsbtnCadastrar,
+            this.tsbtnConsultar,
+            this.tsbtnVoltar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(3, 3, 1, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(570, 58);
-            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Size = new System.Drawing.Size(634, 58);
+            this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // tsbtnClientes
+            // tsbtnAlterarExcluir
             // 
-            this.tsbtnClientes.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnClientes.Image")));
-            this.tsbtnClientes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnClientes.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnClientes.Name = "tsbtnClientes";
-            this.tsbtnClientes.Size = new System.Drawing.Size(101, 52);
-            this.tsbtnClientes.Text = "Clientes";
+            this.tsbtnAlterarExcluir.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAlterarExcluir.Image")));
+            this.tsbtnAlterarExcluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnAlterarExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnAlterarExcluir.Name = "tsbtnAlterarExcluir";
+            this.tsbtnAlterarExcluir.Size = new System.Drawing.Size(133, 52);
+            this.tsbtnAlterarExcluir.Text = "Alterar/Excluir";
             // 
-            // tsbtnFuncionarios
+            // tsbtnCadastrar
             // 
-            this.tsbtnFuncionarios.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnFuncionarios.Image")));
-            this.tsbtnFuncionarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnFuncionarios.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnFuncionarios.Name = "tsbtnFuncionarios";
-            this.tsbtnFuncionarios.Size = new System.Drawing.Size(127, 52);
-            this.tsbtnFuncionarios.Text = "Funcionarios";
+            this.tsbtnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnCadastrar.Image")));
+            this.tsbtnCadastrar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnCadastrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnCadastrar.Name = "tsbtnCadastrar";
+            this.tsbtnCadastrar.Size = new System.Drawing.Size(109, 52);
+            this.tsbtnCadastrar.Text = "Cadastrar";
             // 
-            // tsbtnLivros
+            // tsbtnConsultar
             // 
-            this.tsbtnLivros.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnLivros.Image")));
-            this.tsbtnLivros.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnLivros.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnLivros.Name = "tsbtnLivros";
-            this.tsbtnLivros.Size = new System.Drawing.Size(90, 52);
-            this.tsbtnLivros.Text = "Livros";
+            this.tsbtnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnConsultar.Image")));
+            this.tsbtnConsultar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnConsultar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnConsultar.Name = "tsbtnConsultar";
+            this.tsbtnConsultar.Size = new System.Drawing.Size(110, 52);
+            this.tsbtnConsultar.Text = "Consultar";
+            // 
+            // tsbtnVoltar
+            // 
+            this.tsbtnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnVoltar.Image")));
+            this.tsbtnVoltar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnVoltar.Name = "tsbtnVoltar";
+            this.tsbtnVoltar.Size = new System.Drawing.Size(90, 52);
+            this.tsbtnVoltar.Text = "Voltar";
             // 
             // toolStrip2
             // 
@@ -86,10 +97,10 @@
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbtnSair});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 351);
+            this.toolStrip2.Location = new System.Drawing.Point(0, 406);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(570, 55);
-            this.toolStrip2.TabIndex = 1;
+            this.toolStrip2.Size = new System.Drawing.Size(634, 55);
+            this.toolStrip2.TabIndex = 2;
             this.toolStrip2.Text = "toolStrip2";
             // 
             // tsbtnSair
@@ -103,19 +114,19 @@
             this.tsbtnSair.Text = "Sair";
             this.tsbtnSair.Click += new System.EventHandler(this.tsbtnSair_Click);
             // 
-            // Frm_Principal
+            // Frm_Livros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 406);
+            this.ClientSize = new System.Drawing.Size(634, 461);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MaximizeBox = false;
-            this.Name = "Frm_Principal";
+            this.Name = "Frm_Livros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Biblioteca ";
+            this.Text = "Livros";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
@@ -128,11 +139,11 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton tsbtnClientes;
-        private System.Windows.Forms.ToolStripButton tsbtnFuncionarios;
-        private System.Windows.Forms.ToolStripButton tsbtnLivros;
+        private System.Windows.Forms.ToolStripButton tsbtnAlterarExcluir;
+        private System.Windows.Forms.ToolStripButton tsbtnCadastrar;
+        private System.Windows.Forms.ToolStripButton tsbtnConsultar;
+        private System.Windows.Forms.ToolStripButton tsbtnVoltar;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton tsbtnSair;
     }
 }
-
