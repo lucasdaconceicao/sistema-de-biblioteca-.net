@@ -123,6 +123,7 @@
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.Name = "Frm_Clientes";

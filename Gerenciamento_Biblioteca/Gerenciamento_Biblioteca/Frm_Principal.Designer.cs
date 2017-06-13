@@ -49,7 +49,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(3, 3, 1, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(570, 58);
+            this.toolStrip1.Size = new System.Drawing.Size(634, 58);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -61,6 +61,7 @@
             this.tsbtnClientes.Name = "tsbtnClientes";
             this.tsbtnClientes.Size = new System.Drawing.Size(101, 52);
             this.tsbtnClientes.Text = "Clientes";
+            this.tsbtnClientes.Click += new System.EventHandler(this.tsbtnClientes_Click);
             // 
             // tsbtnFuncionarios
             // 
@@ -70,6 +71,7 @@
             this.tsbtnFuncionarios.Name = "tsbtnFuncionarios";
             this.tsbtnFuncionarios.Size = new System.Drawing.Size(127, 52);
             this.tsbtnFuncionarios.Text = "Funcionarios";
+            this.tsbtnFuncionarios.Click += new System.EventHandler(this.tsbtnFuncionarios_Click);
             // 
             // tsbtnLivros
             // 
@@ -79,6 +81,7 @@
             this.tsbtnLivros.Name = "tsbtnLivros";
             this.tsbtnLivros.Size = new System.Drawing.Size(90, 52);
             this.tsbtnLivros.Text = "Livros";
+            this.tsbtnLivros.Click += new System.EventHandler(this.tsbtnLivros_Click);
             // 
             // toolStrip2
             // 
@@ -86,9 +89,9 @@
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbtnSair});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 351);
+            this.toolStrip2.Location = new System.Drawing.Point(0, 406);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(570, 55);
+            this.toolStrip2.Size = new System.Drawing.Size(634, 55);
             this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -107,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 406);
+            this.ClientSize = new System.Drawing.Size(634, 461);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

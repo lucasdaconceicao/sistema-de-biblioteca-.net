@@ -19,3 +19,4 @@ C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\
 C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.csproj.GenerateResource.Cache
 C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.Frm_Funcionarios.resources
 C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.Frm_Livros.resources
+C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.Frm_Cadastar_Cliente.resources

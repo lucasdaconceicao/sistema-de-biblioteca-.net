@@ -46,6 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clientes.cs" />
+    <Compile Include="Frm_Cadastar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Cadastar_Cliente.Designer.cs">
+      <DependentUpon>Frm_Cadastar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Cadastar_Livros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Cadastar_Livros.Designer.cs">
+      <DependentUpon>Frm_Cadastar_Livros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +70,12 @@
     </Compile>
     <Compile Include="Frm_Funcionarios.Designer.cs">
       <DependentUpon>Frm_Funcionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Cadastrar_Funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Funcionarios_Cadastrar.Designer.cs">
+      <DependentUpon>Frm_Cadastrar_Funcionarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Livros.cs">
       <SubType>Form</SubType>
@@ -70,13 +89,24 @@
     <Compile Include="Frm_Principal.Designer.cs">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Funcionarios.cs" />
+    <Compile Include="Livros.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_Cadastar_Cliente.resx">
+      <DependentUpon>Frm_Cadastar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Cadastar_Livros.resx">
+      <DependentUpon>Frm_Cadastar_Livros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Clientes.resx">
       <DependentUpon>Frm_Clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Funcionarios.resx">
       <DependentUpon>Frm_Funcionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Funcionarios_Cadastrar.resx">
+      <DependentUpon>Frm_Cadastrar_Funcionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Livros.resx">
       <DependentUpon>Frm_Livros.cs</DependentUpon>
@@ -93,6 +123,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
