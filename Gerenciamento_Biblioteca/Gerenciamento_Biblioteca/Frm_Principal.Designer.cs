@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Principal));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnClientes = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnFuncionarios = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnLivros = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnSair = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -43,9 +43,9 @@
             // 
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3});
+            this.tsbtnClientes,
+            this.tsbtnFuncionarios,
+            this.tsbtnLivros});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(3, 3, 1, 0);
@@ -53,54 +53,54 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // tsbtnClientes
             // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(101, 52);
-            this.toolStripButton1.Text = "Clientes";
+            this.tsbtnClientes.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnClientes.Image")));
+            this.tsbtnClientes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnClientes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnClientes.Name = "tsbtnClientes";
+            this.tsbtnClientes.Size = new System.Drawing.Size(101, 52);
+            this.tsbtnClientes.Text = "Clientes";
             // 
-            // toolStripButton2
+            // tsbtnFuncionarios
             // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(127, 52);
-            this.toolStripButton2.Text = "Funcionarios";
+            this.tsbtnFuncionarios.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnFuncionarios.Image")));
+            this.tsbtnFuncionarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnFuncionarios.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnFuncionarios.Name = "tsbtnFuncionarios";
+            this.tsbtnFuncionarios.Size = new System.Drawing.Size(127, 52);
+            this.tsbtnFuncionarios.Text = "Funcionarios";
             // 
-            // toolStripButton3
+            // tsbtnLivros
             // 
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(90, 52);
-            this.toolStripButton3.Text = "Livros";
+            this.tsbtnLivros.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnLivros.Image")));
+            this.tsbtnLivros.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnLivros.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnLivros.Name = "tsbtnLivros";
+            this.tsbtnLivros.Size = new System.Drawing.Size(90, 52);
+            this.tsbtnLivros.Text = "Livros";
             // 
             // toolStrip2
             // 
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton4});
+            this.tsbtnSair});
             this.toolStrip2.Location = new System.Drawing.Point(0, 351);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(570, 55);
             this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // toolStripButton4
+            // tsbtnSair
             // 
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.toolStripButton4.Size = new System.Drawing.Size(83, 52);
-            this.toolStripButton4.Text = "Sair";
+            this.tsbtnSair.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnSair.Image")));
+            this.tsbtnSair.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnSair.Name = "tsbtnSair";
+            this.tsbtnSair.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.tsbtnSair.Size = new System.Drawing.Size(83, 52);
+            this.tsbtnSair.Text = "Sair";
             // 
             // Frm_Principal
             // 
@@ -127,11 +127,11 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton tsbtnClientes;
+        private System.Windows.Forms.ToolStripButton tsbtnFuncionarios;
+        private System.Windows.Forms.ToolStripButton tsbtnLivros;
         private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton tsbtnSair;
     }
 }
 
