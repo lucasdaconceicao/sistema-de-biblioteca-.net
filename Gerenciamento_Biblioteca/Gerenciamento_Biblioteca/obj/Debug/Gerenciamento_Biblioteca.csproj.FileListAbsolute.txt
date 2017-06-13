@@ -1,0 +1,9 @@
+c:\users\lucas\documents\visual studio 2015\Projects\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\bin\Debug\Gerenciamento_Biblioteca.exe.config
+c:\users\lucas\documents\visual studio 2015\Projects\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\bin\Debug\Gerenciamento_Biblioteca.exe
+c:\users\lucas\documents\visual studio 2015\Projects\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\bin\Debug\Gerenciamento_Biblioteca.pdb
+c:\users\lucas\documents\visual studio 2015\Projects\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.csprojResolveAssemblyReference.cache
+c:\users\lucas\documents\visual studio 2015\Projects\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.Properties.Resources.resources
+c:\users\lucas\documents\visual studio 2015\Projects\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.csproj.GenerateResource.Cache
+c:\users\lucas\documents\visual studio 2015\Projects\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.exe
+c:\users\lucas\documents\visual studio 2015\Projects\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.pdb
+c:\users\lucas\documents\visual studio 2015\Projects\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.Frm_principal.resources
