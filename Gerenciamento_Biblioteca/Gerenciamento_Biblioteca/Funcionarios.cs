@@ -14,8 +14,6 @@ namespace Gerenciamento_Biblioteca
         private string _estado;
         private string _telefone;
         private string _cargo;
-        private DateTime _data_admissao;
-        private DateTime _data_demissao;
         private string _cpf;
 
         public string Nome
@@ -93,32 +91,6 @@ namespace Gerenciamento_Biblioteca
             set
             {
                 _cargo = value;
-            }
-        }
-
-        public DateTime Data_admissao
-        {
-            get
-            {
-                return _data_admissao;
-            }
-
-            set
-            {
-                _data_admissao = value;
-            }
-        }
-
-        public DateTime Data_demissao
-        {
-            get
-            {
-                return _data_demissao;
-            }
-
-            set
-            {
-                _data_demissao = value;
             }
         }
 

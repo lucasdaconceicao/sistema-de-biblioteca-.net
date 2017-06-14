@@ -99,6 +99,9 @@
     <EmbeddedResource Include="Frm_Cadastar_Livros.resx">
       <DependentUpon>Frm_Cadastar_Livros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Cadastrar_Funcionarios.resx">
+      <DependentUpon>Frm_Cadastrar_Funcionarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Clientes.resx">
       <DependentUpon>Frm_Clientes.cs</DependentUpon>
     </EmbeddedResource>

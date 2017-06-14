@@ -42,6 +42,7 @@
             this.Name = "Frm_Cadastar_Livros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Livros";
+            this.Load += new System.EventHandler(this.Frm_Cadastar_Livros_Load);
             this.ResumeLayout(false);
 
         }

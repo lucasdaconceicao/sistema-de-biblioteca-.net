@@ -16,5 +16,10 @@ namespace Gerenciamento_Biblioteca
         {
             InitializeComponent();
         }
+
+        private void Frm_Cadastar_Livros_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
