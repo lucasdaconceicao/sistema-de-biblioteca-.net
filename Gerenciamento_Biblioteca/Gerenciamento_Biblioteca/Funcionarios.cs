@@ -16,6 +16,7 @@ namespace Gerenciamento_Biblioteca
         private string _cargo;
         private DateTime _data_admissao;
         private DateTime _data_demissao;
+        private string _cpf;
 
         public string Nome
         {
@@ -118,6 +119,19 @@ namespace Gerenciamento_Biblioteca
             set
             {
                 _data_demissao = value;
+            }
+        }
+
+        public string Cpf
+        {
+            get
+            {
+                return _cpf;
+            }
+
+            set
+            {
+                _cpf = value;
             }
         }
     }

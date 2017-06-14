@@ -15,6 +15,7 @@ namespace Gerenciamento_Biblioteca
         private string _editora;
         private string _paginas;
         private char _status;
+        private string _isbn;
 
         public string Nome
         {
@@ -104,6 +105,19 @@ namespace Gerenciamento_Biblioteca
             set
             {
                 _status = value;
+            }
+        }
+
+        public string Isbn
+        {
+            get
+            {
+                return _isbn;
+            }
+
+            set
+            {
+                _isbn = value;
             }
         }
     }

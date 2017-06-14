@@ -14,6 +14,7 @@ namespace Gerenciamento_Biblioteca
         private string _estado;
         private string _telefone;
         private char _status;
+        private string _cpf;
 
         public string Nome
         {
@@ -90,6 +91,19 @@ namespace Gerenciamento_Biblioteca
             set
             {
                 _status = value;
+            }
+        }
+
+        public string Cpf
+        {
+            get
+            {
+                return _cpf;
+            }
+
+            set
+            {
+                _cpf = value;
             }
         }
     }

@@ -9,8 +9,9 @@ CREATE TABLE Livros
 	Ano_Livro INT NOT NULL,
 	Genero_Livro VARCHAR(50) NOT NULL,
 	Editora_Livro VARCHAR(50) NOT NULL,
-	Paginas_Livro INT NOT NULL,
-	Status_Livro CHAR(1) NOT NULL
+	Paginas_Livro VARCHAR(50) NOT NULL,
+	Status_Livro CHAR(1) NOT NULL,
+	Isbn_Livro VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE Funcionarios
@@ -23,7 +24,8 @@ CREATE TABLE Funcionarios
 	Telefone_Funcionario VARCHAR(20) NOT NULL,
 	Cargo_Funcionario VARCHAR(30) NOT NULL,
 	Data_Admissao_Funcionario DATETIME NOT NULL,
-	Data_Demissao_Funcionario DATETIME NULL
+	Data_Demissao_Funcionario DATETIME NULL,
+	Cpf VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE Clientes
@@ -34,5 +36,6 @@ CREATE TABLE Clientes
 	Cidade_Cliente VARCHAR(50) NOT NULL,
 	Estado_Cliente  VARCHAR(30) NOT NULL,
 	Telefone_Cliente VARCHAR(20) NOT NULL,
-	Status_Cliente CHAR(1) NOT NULL
+	Status_Cliente CHAR(1) NOT NULL,
+	Cpf VARCHAR(30) NOT NULL
 );
