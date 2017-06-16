@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Funcionarios));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tsbtnAlterarExcluir = new System.Windows.Forms.ToolStripButton();
             this.tsbtnCadastrar = new System.Windows.Forms.ToolStripButton();
             this.tsbtnConsultar = new System.Windows.Forms.ToolStripButton();
             this.tsbtnVoltar = new System.Windows.Forms.ToolStripButton();
@@ -44,7 +43,6 @@
             // 
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbtnAlterarExcluir,
             this.tsbtnCadastrar,
             this.tsbtnConsultar,
             this.tsbtnVoltar});
@@ -54,15 +52,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(634, 58);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // tsbtnAlterarExcluir
-            // 
-            this.tsbtnAlterarExcluir.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAlterarExcluir.Image")));
-            this.tsbtnAlterarExcluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnAlterarExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnAlterarExcluir.Name = "tsbtnAlterarExcluir";
-            this.tsbtnAlterarExcluir.Size = new System.Drawing.Size(133, 52);
-            this.tsbtnAlterarExcluir.Text = "Alterar/Excluir";
             // 
             // tsbtnCadastrar
             // 
@@ -91,6 +80,7 @@
             this.tsbtnVoltar.Name = "tsbtnVoltar";
             this.tsbtnVoltar.Size = new System.Drawing.Size(90, 52);
             this.tsbtnVoltar.Text = "Voltar";
+            this.tsbtnVoltar.Click += new System.EventHandler(this.tsbtnVoltar_Click);
             // 
             // toolStrip2
             // 
@@ -141,7 +131,6 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton tsbtnAlterarExcluir;
         private System.Windows.Forms.ToolStripButton tsbtnCadastrar;
         private System.Windows.Forms.ToolStripButton tsbtnConsultar;
         private System.Windows.Forms.ToolStripButton tsbtnVoltar;

@@ -31,5 +31,10 @@ namespace Gerenciamento_Biblioteca
             Frm_Cadastrar_Funcionarios objFrmCadastrar_Funcionarios = new Frm_Cadastrar_Funcionarios();
             objFrmCadastrar_Funcionarios.ShowDialog();
         }
+
+        private void tsbtnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

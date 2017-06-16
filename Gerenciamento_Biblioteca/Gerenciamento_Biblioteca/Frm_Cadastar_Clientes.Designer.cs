@@ -60,6 +60,7 @@
             this.btnCancelar.TabIndex = 91;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // panel1
             // 
@@ -111,10 +112,12 @@
             this.btnCadastrar.TabIndex = 92;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txtCidade
             // 
             this.txtCidade.Location = new System.Drawing.Point(29, 150);
+            this.txtCidade.MaxLength = 50;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(141, 20);
             this.txtCidade.TabIndex = 89;
@@ -122,6 +125,7 @@
             // txtEndereco
             // 
             this.txtEndereco.Location = new System.Drawing.Point(29, 97);
+            this.txtEndereco.MaxLength = 50;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(328, 20);
             this.txtEndereco.TabIndex = 88;
@@ -129,9 +133,11 @@
             // txtCpf
             // 
             this.txtCpf.Location = new System.Drawing.Point(194, 198);
+            this.txtCpf.MaxLength = 11;
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(163, 20);
             this.txtCpf.TabIndex = 84;
+            this.txtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCpf_KeyPress);
             // 
             // label7
             // 
@@ -154,9 +160,11 @@
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(29, 198);
+            this.txtTelefone.MaxLength = 12;
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(141, 20);
             this.txtTelefone.TabIndex = 79;
+            this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
             // 
             // label6
             // 
@@ -197,6 +205,7 @@
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(29, 46);
+            this.txtNome.MaxLength = 100;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(328, 20);
             this.txtNome.TabIndex = 75;
@@ -204,10 +213,39 @@
             // cbxEstado
             // 
             this.cbxEstado.FormattingEnabled = true;
+            this.cbxEstado.Items.AddRange(new object[] {
+            "Acre (AC)",
+            "Alagoas (AL)",
+            "Amapá (AP)",
+            "Amazonas (AM)",
+            "Bahia (BA)",
+            "Ceará (CE)",
+            "Distrito Federal (DF)",
+            "Espírito Santo (ES)",
+            "Goiás (GO)",
+            "Maranhão (MA)",
+            "Mato Grosso (MT)",
+            "Mato Grosso do Sul (MS)",
+            "Minas Gerais (MG)",
+            "Pará (PA) ",
+            "Paraíba (PB)",
+            "Paraná (PR)",
+            "Pernambuco (PE)",
+            "Piauí (PI)",
+            "Rio de Janeiro (RJ)",
+            "Rio Grande do Norte (RN)",
+            "Rio Grande do Sul (RS)",
+            "Rondônia (RO)",
+            "Roraima (RR)",
+            "Santa Catarina (SC)",
+            "São Paulo (SP)",
+            "Sergipe (SE)",
+            "Tocantins (TO)"});
             this.cbxEstado.Location = new System.Drawing.Point(194, 150);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(163, 21);
             this.cbxEstado.TabIndex = 93;
+            this.cbxEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxEstado_KeyPress);
             // 
             // Frm_Cadastar_Clientes
             // 

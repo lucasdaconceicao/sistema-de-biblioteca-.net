@@ -85,14 +85,8 @@ namespace Gerenciamento_Biblioteca
 
             set
             {
-                if (!String.IsNullOrEmpty(value))
-                {
-                    _estado = value;
-                }
-                else
-                {
-                    throw new Exception("Selecione um estado");
-                }
+
+                _estado = value;
             }
         }
 

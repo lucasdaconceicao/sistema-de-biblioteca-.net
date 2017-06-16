@@ -30,7 +30,15 @@ namespace Gerenciamento_Biblioteca
                 funcionario.Cpf = txtCpf.Text;
                 funcionario.Cidade = txtCidade.Text;
                 funcionario.Cargo = txtCargo.Text;
-                funcionario.Estado = cbxEstado.SelectedText;
+                if (cbxEstado.SelectedIndex!=-1)
+                {
+                    funcionario.Estado = cbxEstado.SelectedItem.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Selecione um estado!");
+                    return;
+                }
 
                 //abrindo a conexão com banco de dados;
                 conn.Open();
@@ -38,36 +46,43 @@ namespace Gerenciamento_Biblioteca
                 if (conn.State == ConnectionState.Open)
                 {
                     MySqlCommand comando = conn.CreateCommand();
-                    string consulta = "INSERT INTO LIVROS (NOME_LIVRO,AUTOR_LIVRO,ANO_LIVRO,GENERO_LIVRO,EDITORA_LIVRO,PAGINAS_LIVRO,STATUS_LIVRO,ISBN_LIVRO) VALUES (?NOME,?AUTOR,?ANO,?GENERO,?EDITORA,?PAGINAS,?STATUS,?ISBN)";
+                    string consulta = "INSERT INTO FUNCIONARIOS (NOME_FUNCIONARIO,ENDERECO_FUNCIONARIO,CIDADE_FUNCIONARIO,ESTADO_FUNCIONARIO,TELEFONE_FUNCIONARIO,CARGO_FUNCIONARIO,CPF) VALUES (?NOME,?ENDERECO,?CIDADE,?ESTADO,?TELEFONE,?CARGO,?CPF)";
                     comando.CommandText = consulta;
-                    comando.Parameters.AddWithValue("?NOME", livro.Nome);
-                    comando.Parameters.AddWithValue("?AUTOR", livro.Autor);
-                    comando.Parameters.AddWithValue("?ANO", livro.Ano);
-                    comando.Parameters.AddWithValue("?GENERO", livro.Genero);
-                    comando.Parameters.AddWithValue("?EDITORA", livro.Editora);
-                    comando.Parameters.AddWithValue("?PAGINAS", livro.Paginas);
-                    comando.Parameters.AddWithValue("?STATUS", livro.Status);
-                    comando.Parameters.AddWithValue("?ISBN", livro.Isbn);
+                    comando.Parameters.AddWithValue("?NOME", funcionario.Nome);
+                    comando.Parameters.AddWithValue("?ENDERECO", funcionario.Endereco);
+                    comando.Parameters.AddWithValue("?CIDADE", funcionario.Cidade);
+                    comando.Parameters.AddWithValue("?ESTADO", funcionario.Estado);
+                    comando.Parameters.AddWithValue("?TELEFONE", funcionario.Telefone);
+                    comando.Parameters.AddWithValue("?CARGO", funcionario.Cargo);
+                    comando.Parameters.AddWithValue("?CPF", funcionario.Cpf);
 
                     if (comando.ExecuteNonQuery() > 0)
                     {
-                        MessageBox.Show("Livro cadastrado com sucesso!");
+                        MessageBox.Show("Funcionario cadastrado com sucesso!");
                         LimparCampos();
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show("Erro:. " + ex.Message);
             }
             finally
             {
-
+                //fechando a conexao com o banco de dados
+                conn.Close();
             }
+        }
 
-
-
+        private void LimparCampos()
+        {
+            txtNome.Clear();
+            txtEndereco.Clear();
+            txtTelefone.Clear();
+            txtCpf.Clear();
+            txtCidade.Clear();
+            txtCargo.Clear();
+            cbxEstado.SelectedIndex = -1;
         }
 
         private void cbxEstado_KeyPress(object sender, KeyPressEventArgs e)
@@ -75,5 +90,27 @@ namespace Gerenciamento_Biblioteca
             e.Handled = true;
         }
 
+        private void txtTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //cancela o evento no campo letra e se nao for a tecla back
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //cancela o evento no campo letra e se nao for a tecla back
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

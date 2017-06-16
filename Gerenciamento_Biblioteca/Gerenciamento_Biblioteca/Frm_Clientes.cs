@@ -25,5 +25,21 @@ namespace Gerenciamento_Biblioteca
                 Application.Exit();
             }
         }
+
+        private void tsbtnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void tsbtnCadastrar_Click(object sender, EventArgs e)
+        {
+            Frm_Cadastar_Clientes objFrmCadastrarCliente = new Frm_Cadastar_Clientes();
+            objFrmCadastrarCliente.ShowDialog();
+        }
+
+        private void tsbtnConsultar_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

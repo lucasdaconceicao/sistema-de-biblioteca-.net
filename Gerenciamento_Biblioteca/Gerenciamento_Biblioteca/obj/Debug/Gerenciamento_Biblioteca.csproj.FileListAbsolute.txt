@@ -24,3 +24,4 @@ C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\
 C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.Frm_Cadastrar_Funcionarios.resources
 C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\bin\Debug\MySql.Data.dll
 C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\bin\Debug\MySql.Data.xml
+C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.Frm_Consulta_Livros.resources

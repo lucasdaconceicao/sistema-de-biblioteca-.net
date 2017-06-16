@@ -31,5 +31,16 @@ namespace Gerenciamento_Biblioteca
             Frm_Cadastar_Livros objCadastrar_Livros = new Frm_Cadastar_Livros();
             objCadastrar_Livros.ShowDialog();
         }
+
+        private void tsbtnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void tsbtnConsultar_Click(object sender, EventArgs e)
+        {
+            Frm_Consulta_Livros objConsulta_livros = new Frm_Consulta_Livros();
+            objConsulta_livros.ShowDialog();
+        }
     }
 }

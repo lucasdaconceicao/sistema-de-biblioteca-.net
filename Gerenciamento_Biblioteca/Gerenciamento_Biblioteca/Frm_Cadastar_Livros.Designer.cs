@@ -245,7 +245,7 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(91, 33);
             this.btnCadastrar.TabIndex = 73;
-            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.Text = "SALVAR";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 

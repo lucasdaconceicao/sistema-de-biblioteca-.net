@@ -43,5 +43,13 @@ namespace Gerenciamento_Biblioteca
             Frm_Livros objFrm_Livros = new Frm_Livros();
             objFrm_Livros.ShowDialog();
         }
+
+        private void Frm_Principal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue==(char)Keys.Escape)
+            {
+                this.Dispose();
+            }
+        }
     }
 }

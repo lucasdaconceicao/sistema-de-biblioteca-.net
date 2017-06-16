@@ -59,6 +59,7 @@
             this.btnCancelar.TabIndex = 91;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnCadastrar
             // 
@@ -78,6 +79,7 @@
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(144, 20);
             this.txtTelefone.TabIndex = 89;
+            this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
             // 
             // txtEndereco
             // 
@@ -148,6 +150,7 @@
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(163, 20);
             this.txtCpf.TabIndex = 79;
+            this.txtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCpf_KeyPress);
             // 
             // label6
             // 

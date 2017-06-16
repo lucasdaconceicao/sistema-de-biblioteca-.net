@@ -35,6 +35,7 @@
             this.tsbtnLivros = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.tsbtnSair = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +46,8 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbtnClientes,
             this.tsbtnFuncionarios,
-            this.tsbtnLivros});
+            this.tsbtnLivros,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(3, 3, 1, 0);
@@ -106,6 +108,15 @@
             this.tsbtnSair.Text = "Sair";
             this.tsbtnSair.Click += new System.EventHandler(this.tsbtnSair_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(103, 52);
+            this.toolStripButton1.Text = "Locação";
+            // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,6 +130,7 @@
             this.Name = "Frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Biblioteca ";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm_Principal_KeyDown);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
@@ -136,6 +148,7 @@
         private System.Windows.Forms.ToolStripButton tsbtnLivros;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton tsbtnSair;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 

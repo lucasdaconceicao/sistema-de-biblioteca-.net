@@ -25,7 +25,14 @@ namespace Gerenciamento_Biblioteca
 
             set
             {
-                _nome = value;
+                if (!String.IsNullOrEmpty(value))
+                {
+                    _nome = value;
+                }
+                else
+                {
+                    throw new Exception("O nome não pode ser vazio.");
+                }
             }
         }
 
@@ -38,7 +45,14 @@ namespace Gerenciamento_Biblioteca
 
             set
             {
-                _endereco = value;
+                if (!String.IsNullOrEmpty(value))
+                {
+                    _endereco = value;
+                }
+                else
+                {
+                    throw new Exception("O endereco não pode ser vazio.");
+                }
             }
         }
 
@@ -51,7 +65,14 @@ namespace Gerenciamento_Biblioteca
 
             set
             {
-                _cidade = value;
+                if (!String.IsNullOrEmpty(value))
+                {
+                    _cidade = value;
+                }
+                else
+                {
+                    throw new Exception("A cidade não pode ser vazio.");
+                }
             }
         }
 
@@ -77,7 +98,14 @@ namespace Gerenciamento_Biblioteca
 
             set
             {
-                _telefone = value;
+                if (!String.IsNullOrEmpty(value) && value.Length == 12)
+                {
+                    _telefone = value;
+                }
+                else
+                {
+                    throw new Exception("Digite corretamente o telefone.");
+                }
             }
         }
 
@@ -103,7 +131,14 @@ namespace Gerenciamento_Biblioteca
 
             set
             {
-                _cpf = value;
+                if (!String.IsNullOrEmpty(value) && value.Length == 11)
+                {
+                    _cpf = value;
+                }
+                else
+                {
+                    throw new Exception("Digite corretamente o cpf.");
+                }
             }
         }
     }
