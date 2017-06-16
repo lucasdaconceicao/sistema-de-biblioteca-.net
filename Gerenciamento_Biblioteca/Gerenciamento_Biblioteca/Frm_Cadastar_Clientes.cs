@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gerenciamento_Biblioteca
 {
-    public partial class Frm_Cadastar_Cliente : Form
+    public partial class Frm_Cadastar_Clientes : Form
     {
-        public Frm_Cadastar_Cliente()
+        public Frm_Cadastar_Clientes()
         {
             InitializeComponent();
         }

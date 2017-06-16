@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,17 +48,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clientes.cs" />
-    <Compile Include="Frm_Cadastar_Cliente.cs">
+    <Compile Include="Frm_Cadastar_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Cadastar_Cliente.Designer.cs">
-      <DependentUpon>Frm_Cadastar_Cliente.cs</DependentUpon>
+    <Compile Include="Frm_Cadastar_Clientes.Designer.cs">
+      <DependentUpon>Frm_Cadastar_Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Cadastar_Livros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Cadastar_Livros.Designer.cs">
       <DependentUpon>Frm_Cadastar_Livros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Cadastrar_Funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Cadastrar_Funcionarios.Designer.cs">
+      <DependentUpon>Frm_Cadastrar_Funcionarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Clientes.cs">
       <SubType>Form</SubType>
@@ -70,12 +77,6 @@
     </Compile>
     <Compile Include="Frm_Funcionarios.Designer.cs">
       <DependentUpon>Frm_Funcionarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Cadastrar_Funcionarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Funcionarios_Cadastrar.Designer.cs">
-      <DependentUpon>Frm_Cadastrar_Funcionarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Livros.cs">
       <SubType>Form</SubType>
@@ -93,8 +94,8 @@
     <Compile Include="Livros.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Frm_Cadastar_Cliente.resx">
-      <DependentUpon>Frm_Cadastar_Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Cadastar_Clientes.resx">
+      <DependentUpon>Frm_Cadastar_Clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Cadastar_Livros.resx">
       <DependentUpon>Frm_Cadastar_Livros.cs</DependentUpon>
@@ -107,9 +108,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Funcionarios.resx">
       <DependentUpon>Frm_Funcionarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Funcionarios_Cadastrar.resx">
-      <DependentUpon>Frm_Cadastrar_Funcionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Livros.resx">
       <DependentUpon>Frm_Livros.cs</DependentUpon>

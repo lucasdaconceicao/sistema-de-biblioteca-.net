@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Gerenciamento_Biblioteca
 {
-    public partial class Frm_Funcionarios_Cadastrar : Form
+    public partial class Frm_Cadastrar_Funcionarios : Form
     {
-        public Frm_Funcionarios_Cadastrar()
+        public Frm_Cadastrar_Funcionarios()
         {
             InitializeComponent();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

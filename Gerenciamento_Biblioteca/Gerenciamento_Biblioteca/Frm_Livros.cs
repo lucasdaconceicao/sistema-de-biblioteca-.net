@@ -25,5 +25,11 @@ namespace Gerenciamento_Biblioteca
                 Application.Exit();
             }
         }
+
+        private void tsbtnCadastrar_Click(object sender, EventArgs e)
+        {
+            Frm_Cadastar_Livros objCadastrar_Livros = new Frm_Cadastar_Livros();
+            objCadastrar_Livros.ShowDialog();
+        }
     }
 }

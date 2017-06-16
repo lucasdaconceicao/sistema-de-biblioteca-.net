@@ -10,7 +10,7 @@ namespace Gerenciamento_Biblioteca
     {
         private string _nome;
         private string _autor;
-        private int _ano;
+        private string _ano;
         private string _genero;
         private string _editora;
         private string _paginas;
@@ -26,7 +26,14 @@ namespace Gerenciamento_Biblioteca
 
             set
             {
-                _nome = value;
+                if (!String.IsNullOrEmpty(value))
+                {
+                    _nome = value;
+                }
+                else
+                {
+                    throw new Exception("O nome não pode ser vazio.");
+                }
             }
         }
 
@@ -39,11 +46,18 @@ namespace Gerenciamento_Biblioteca
 
             set
             {
-                _autor = value;
+                if (!String.IsNullOrEmpty(value))
+                {
+                    _autor = value;
+                }
+                else
+                {
+                    throw new Exception("O autor não pode ser vazio.");
+                }
             }
         }
 
-        public int Ano
+        public string Ano
         {
             get
             {
@@ -52,7 +66,14 @@ namespace Gerenciamento_Biblioteca
 
             set
             {
-                _ano = value;
+                if (!String.IsNullOrEmpty(value) && value.Length == 4)
+                {
+                    _ano = value;
+                }
+                else
+                {
+                    throw new Exception("Digite corretamente o ano.");
+                }
             }
         }
 
@@ -65,7 +86,14 @@ namespace Gerenciamento_Biblioteca
 
             set
             {
-                _genero = value;
+                if (!String.IsNullOrEmpty(value))
+                {
+                    _genero = value;
+                }
+                else
+                {
+                    throw new Exception("O genero não pode ser vazio.");
+                }
             }
         }
 
@@ -78,7 +106,14 @@ namespace Gerenciamento_Biblioteca
 
             set
             {
-                _editora = value;
+                if (!String.IsNullOrEmpty(value))
+                {
+                    _editora = value;
+                }
+                else
+                {
+                    throw new Exception("A editora não pode ser vazio.");
+                }
             }
         }
 
@@ -91,7 +126,14 @@ namespace Gerenciamento_Biblioteca
 
             set
             {
-                _paginas = value;
+                if (!String.IsNullOrEmpty(value))
+                {
+                    _paginas = value;
+                }
+                else
+                {
+                    throw new Exception("As paginas não pode ser vazio.");
+                }
             }
         }
 
@@ -117,7 +159,14 @@ namespace Gerenciamento_Biblioteca
 
             set
             {
-                _isbn = value;
+                if (!String.IsNullOrEmpty(value))
+                {
+                    _isbn = value;
+                }
+                else
+                {
+                    throw new Exception("O isbn não pode ser vazio.");
+                }
             }
         }
     }
