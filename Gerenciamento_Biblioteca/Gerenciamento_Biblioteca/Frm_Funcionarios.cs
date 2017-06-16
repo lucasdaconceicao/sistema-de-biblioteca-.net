@@ -25,5 +25,11 @@ namespace Gerenciamento_Biblioteca
                 Application.Exit();
             }
         }
+
+        private void tsbtnCadastrar_Click(object sender, EventArgs e)
+        {
+            Frm_Cadastrar_Funcionarios objFrmCadastrar_Funcionarios = new Frm_Cadastrar_Funcionarios();
+            objFrmCadastrar_Funcionarios.ShowDialog();
+        }
     }
 }

@@ -72,6 +72,7 @@
             this.tsbtnCadastrar.Name = "tsbtnCadastrar";
             this.tsbtnCadastrar.Size = new System.Drawing.Size(109, 52);
             this.tsbtnCadastrar.Text = "Cadastrar";
+            this.tsbtnCadastrar.Click += new System.EventHandler(this.tsbtnCadastrar_Click);
             // 
             // tsbtnConsultar
             // 

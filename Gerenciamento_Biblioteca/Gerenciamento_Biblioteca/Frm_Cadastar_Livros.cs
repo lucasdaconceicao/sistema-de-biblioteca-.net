@@ -21,7 +21,6 @@ namespace Gerenciamento_Biblioteca
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=lucas;Pwd=root;");
-
             try
             {
                 Livros livro = new Livros();
@@ -49,7 +48,7 @@ namespace Gerenciamento_Biblioteca
                 if (conn.State == ConnectionState.Open)
                 {
                     MySqlCommand comando = conn.CreateCommand();
-                    string consulta = "INSERT INTO LIVROS (NOME_LIVRO,AUTOR_LIVRO,ANO_LIVRO,GENERO_LIVRO,EDITORA_LIVRO,PAGINAS_LIVRO,STATUS_LIVRO,ISBN_LIVRO) VALUES (?NOME,?ENDERECO,?TELEFONE,?EMAIL,?OBSERVACAO)";
+                    string consulta = "INSERT INTO LIVROS (NOME_LIVRO,AUTOR_LIVRO,ANO_LIVRO,GENERO_LIVRO,EDITORA_LIVRO,PAGINAS_LIVRO,STATUS_LIVRO,ISBN_LIVRO) VALUES (?NOME,?AUTOR,?ANO,?GENERO,?EDITORA,?PAGINAS,?STATUS,?ISBN)";
                     comando.CommandText = consulta;
                     comando.Parameters.AddWithValue("?NOME", livro.Nome);
                     comando.Parameters.AddWithValue("?AUTOR", livro.Autor);
@@ -63,6 +62,7 @@ namespace Gerenciamento_Biblioteca
                     if (comando.ExecuteNonQuery() > 0)
                     {
                         MessageBox.Show("Livro cadastrado com sucesso!");
+                        LimparCampos();
                     }
                 }
             }
@@ -70,9 +70,9 @@ namespace Gerenciamento_Biblioteca
             {
                 MessageBox.Show("Erro:. " + ex.Message);
             }
-
             finally
             {
+                //fechando a conexao com o banco de dados
                 conn.Close();
             }
         }
@@ -107,6 +107,18 @@ namespace Gerenciamento_Biblioteca
             {
                 e.Handled = true;
             }
+        }
+        private void LimparCampos()
+        {
+            txtNome.Clear();
+            txtAno.Clear();
+            txtAutor.Clear();
+            txtGenero.Clear();
+            txtPaginas.Clear();
+            txtEditora.Clear();
+            txtIsbn.Clear();
+            rbD.Checked = false;
+            rbI.Checked = false;
         }
     }
 }
