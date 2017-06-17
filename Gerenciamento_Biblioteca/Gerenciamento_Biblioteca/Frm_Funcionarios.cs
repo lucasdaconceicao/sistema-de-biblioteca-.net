@@ -36,5 +36,11 @@ namespace Gerenciamento_Biblioteca
         {
             this.Dispose();
         }
+
+        private void tsbtnConsultar_Click(object sender, EventArgs e)
+        {
+            Frm_Consulta_Funcionarios objConsulta_funcionario = new Frm_Consulta_Funcionarios();
+            objConsulta_funcionario.ShowDialog();
+        }
     }
 }

@@ -71,6 +71,7 @@
             this.tsbtnConsultar.Name = "tsbtnConsultar";
             this.tsbtnConsultar.Size = new System.Drawing.Size(110, 52);
             this.tsbtnConsultar.Text = "Consultar";
+            this.tsbtnConsultar.Click += new System.EventHandler(this.tsbtnConsultar_Click);
             // 
             // tsbtnVoltar
             // 

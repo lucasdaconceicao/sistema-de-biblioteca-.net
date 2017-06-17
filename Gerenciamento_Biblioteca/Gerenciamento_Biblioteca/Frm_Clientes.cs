@@ -39,7 +39,8 @@ namespace Gerenciamento_Biblioteca
 
         private void tsbtnConsultar_Click(object sender, EventArgs e)
         {
-           
+            Frm_Consulta_Clientes objConsulta_Clientes = new Frm_Consulta_Clientes();
+            objConsulta_Clientes.ShowDialog();
         }
     }
 }
