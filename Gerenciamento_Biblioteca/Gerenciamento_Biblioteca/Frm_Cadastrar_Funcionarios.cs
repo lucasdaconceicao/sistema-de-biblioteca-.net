@@ -20,6 +20,7 @@ namespace Gerenciamento_Biblioteca
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            //conexao com o bd
             MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=lucas;Pwd=root;");
             try
             {
@@ -45,6 +46,7 @@ namespace Gerenciamento_Biblioteca
                 //teste se esta aberto
                 if (conn.State == ConnectionState.Open)
                 {
+                    //comando para insercao no bd
                     MySqlCommand comando = conn.CreateCommand();
                     string consulta = "INSERT INTO FUNCIONARIOS (NOME_FUNCIONARIO,ENDERECO_FUNCIONARIO,CIDADE_FUNCIONARIO,ESTADO_FUNCIONARIO,TELEFONE_FUNCIONARIO,CARGO_FUNCIONARIO,CPF) VALUES (?NOME,?ENDERECO,?CIDADE,?ESTADO,?TELEFONE,?CARGO,?CPF)";
                     comando.CommandText = consulta;
@@ -56,6 +58,7 @@ namespace Gerenciamento_Biblioteca
                     comando.Parameters.AddWithValue("?CARGO", funcionario.Cargo);
                     comando.Parameters.AddWithValue("?CPF", funcionario.Cpf);
 
+                    //se executo a query com sucesso
                     if (comando.ExecuteNonQuery() > 0)
                     {
                         MessageBox.Show("Funcionario cadastrado com sucesso!");
@@ -85,6 +88,7 @@ namespace Gerenciamento_Biblioteca
             cbxEstado.SelectedIndex = -1;
         }
 
+        //sem iteracao no campo
         private void cbxEstado_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;

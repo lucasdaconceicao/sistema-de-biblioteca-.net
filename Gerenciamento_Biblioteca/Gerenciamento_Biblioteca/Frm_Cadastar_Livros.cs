@@ -20,6 +20,7 @@ namespace Gerenciamento_Biblioteca
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            //conexao com o bd
             MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=lucas;Pwd=root;");
             try
             {
@@ -47,6 +48,7 @@ namespace Gerenciamento_Biblioteca
                 //teste se esta aberto
                 if (conn.State == ConnectionState.Open)
                 {
+                    //comando para insercao no bd
                     MySqlCommand comando = conn.CreateCommand();
                     string consulta = "INSERT INTO LIVROS (NOME_LIVRO,AUTOR_LIVRO,ANO_LIVRO,GENERO_LIVRO,EDITORA_LIVRO,PAGINAS_LIVRO,STATUS_LIVRO,ISBN_LIVRO) VALUES (?NOME,?AUTOR,?ANO,?GENERO,?EDITORA,?PAGINAS,?STATUS,?ISBN)";
                     comando.CommandText = consulta;
@@ -59,6 +61,7 @@ namespace Gerenciamento_Biblioteca
                     comando.Parameters.AddWithValue("?STATUS", livro.Status);
                     comando.Parameters.AddWithValue("?ISBN", livro.Isbn);
 
+                    //se executo o comando com sucesso
                     if (comando.ExecuteNonQuery() > 0)
                     {
                         MessageBox.Show("Livro cadastrado com sucesso!");
