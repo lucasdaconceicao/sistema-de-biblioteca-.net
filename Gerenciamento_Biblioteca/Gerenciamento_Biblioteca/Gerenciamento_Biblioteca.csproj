@@ -72,6 +72,18 @@
     <Compile Include="Frm_Clientes.Designer.cs">
       <DependentUpon>Frm_Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Consulta_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Consulta_Clientes.Designer.cs">
+      <DependentUpon>Frm_Consulta_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Consulta_Funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Consulta_Funcionarios.Designer.cs">
+      <DependentUpon>Frm_Consulta_Funcionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Consulta_Livros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +123,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Clientes.resx">
       <DependentUpon>Frm_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Consulta_Clientes.resx">
+      <DependentUpon>Frm_Consulta_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Consulta_Funcionarios.resx">
+      <DependentUpon>Frm_Consulta_Funcionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Consulta_Livros.resx">
       <DependentUpon>Frm_Consulta_Livros.cs</DependentUpon>
