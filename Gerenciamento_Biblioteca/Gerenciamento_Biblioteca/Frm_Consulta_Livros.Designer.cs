@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Consulta_Livros));
             this.dgv_Livros = new System.Windows.Forms.DataGridView();
-            this.txtNome_Busca = new System.Windows.Forms.TextBox();
-            this.btnbusca = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AUTOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,11 +39,18 @@
             this.PAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.STATUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNome_Busca = new System.Windows.Forms.TextBox();
+            this.btnbusca = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Livros)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_Livros
             // 
+            this.dgv_Livros.AllowUserToAddRows = false;
+            this.dgv_Livros.AllowUserToDeleteRows = false;
             this.dgv_Livros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Livros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -61,57 +63,16 @@
             this.STATUS,
             this.ISBN});
             this.dgv_Livros.Location = new System.Drawing.Point(2, 61);
+            this.dgv_Livros.MultiSelect = false;
             this.dgv_Livros.Name = "dgv_Livros";
+            this.dgv_Livros.ReadOnly = true;
+            this.dgv_Livros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_Livros.ShowCellErrors = false;
+            this.dgv_Livros.ShowCellToolTips = false;
+            this.dgv_Livros.ShowEditingIcon = false;
+            this.dgv_Livros.ShowRowErrors = false;
             this.dgv_Livros.Size = new System.Drawing.Size(722, 328);
             this.dgv_Livros.TabIndex = 0;
-            // 
-            // txtNome_Busca
-            // 
-            this.txtNome_Busca.Location = new System.Drawing.Point(43, 35);
-            this.txtNome_Busca.MaxLength = 100;
-            this.txtNome_Busca.Name = "txtNome_Busca";
-            this.txtNome_Busca.Size = new System.Drawing.Size(297, 20);
-            this.txtNome_Busca.TabIndex = 1;
-            // 
-            // btnbusca
-            // 
-            this.btnbusca.Location = new System.Drawing.Point(375, 29);
-            this.btnbusca.Name = "btnbusca";
-            this.btnbusca.Size = new System.Drawing.Size(84, 26);
-            this.btnbusca.TabIndex = 2;
-            this.btnbusca.Text = "BUSCA";
-            this.btnbusca.UseVisualStyleBackColor = true;
-            this.btnbusca.Click += new System.EventHandler(this.btnbusca_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Digite o nome do livro aqui";
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnCadastrar.Location = new System.Drawing.Point(596, 416);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(91, 33);
-            this.btnCadastrar.TabIndex = 75;
-            this.btnCadastrar.Text = "EDITAR";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Cyan;
-            this.btnCancelar.Location = new System.Drawing.Point(509, 416);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(80, 33);
-            this.btnCancelar.TabIndex = 74;
-            this.btnCancelar.Text = "VOLTAR";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // ID
             // 
@@ -175,6 +136,54 @@
             this.ISBN.Name = "ISBN";
             this.ISBN.ReadOnly = true;
             this.ISBN.Width = 80;
+            // 
+            // txtNome_Busca
+            // 
+            this.txtNome_Busca.Location = new System.Drawing.Point(43, 35);
+            this.txtNome_Busca.MaxLength = 100;
+            this.txtNome_Busca.Name = "txtNome_Busca";
+            this.txtNome_Busca.Size = new System.Drawing.Size(297, 20);
+            this.txtNome_Busca.TabIndex = 1;
+            // 
+            // btnbusca
+            // 
+            this.btnbusca.Location = new System.Drawing.Point(375, 29);
+            this.btnbusca.Name = "btnbusca";
+            this.btnbusca.Size = new System.Drawing.Size(84, 26);
+            this.btnbusca.TabIndex = 2;
+            this.btnbusca.Text = "BUSCA";
+            this.btnbusca.UseVisualStyleBackColor = true;
+            this.btnbusca.Click += new System.EventHandler(this.btnbusca_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(49, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Digite o nome do livro aqui";
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnCadastrar.Location = new System.Drawing.Point(596, 416);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(91, 33);
+            this.btnCadastrar.TabIndex = 75;
+            this.btnCadastrar.Text = "EDITAR";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Cyan;
+            this.btnCancelar.Location = new System.Drawing.Point(509, 416);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(80, 33);
+            this.btnCancelar.TabIndex = 74;
+            this.btnCancelar.Text = "VOLTAR";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Frm_Consulta_Livros
             // 

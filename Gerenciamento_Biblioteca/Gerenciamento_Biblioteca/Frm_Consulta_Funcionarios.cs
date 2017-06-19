@@ -73,16 +73,14 @@ namespace Gerenciamento_Biblioteca
             catch (Exception ex)
             {
                 MessageBox.Show("Erro:. " + ex.Message);
-
             }
             finally
             {
                 //fechando a conexao com o banco de dados
                 conn.Close();
             }
-
-
         }
+
         private void btnBusca_Click(object sender, EventArgs e)
         {
             recarregarGrid();
@@ -91,7 +89,6 @@ namespace Gerenciamento_Biblioteca
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
-
         }
     }
 }

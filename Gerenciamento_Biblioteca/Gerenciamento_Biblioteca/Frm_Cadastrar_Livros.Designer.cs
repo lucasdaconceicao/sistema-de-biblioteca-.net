@@ -1,6 +1,6 @@
 ﻿namespace Gerenciamento_Biblioteca
 {
-    partial class Frm_Cadastar_Livros
+    partial class Frm_Cadastrar_Livros
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cadastar_Livros));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cadastrar_Livros));
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbI = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();

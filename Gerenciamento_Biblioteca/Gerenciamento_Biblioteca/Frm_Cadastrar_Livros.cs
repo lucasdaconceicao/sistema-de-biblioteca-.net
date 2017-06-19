@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Gerenciamento_Biblioteca
 {
-    public partial class Frm_Cadastar_Livros : Form
+    public partial class Frm_Cadastrar_Livros : Form
     {
-        public Frm_Cadastar_Livros()
+        public Frm_Cadastrar_Livros()
         {
             InitializeComponent();
         }

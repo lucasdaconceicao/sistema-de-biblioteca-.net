@@ -48,17 +48,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clientes.cs" />
-    <Compile Include="Frm_Cadastar_Clientes.cs">
+    <Compile Include="Frm_Cadastrar_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Cadastar_Clientes.Designer.cs">
-      <DependentUpon>Frm_Cadastar_Clientes.cs</DependentUpon>
+    <Compile Include="Frm_Cadastrar_Clientes.Designer.cs">
+      <DependentUpon>Frm_Cadastrar_Clientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Cadastar_Livros.cs">
+    <Compile Include="Frm_Cadastrar_Livros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Cadastar_Livros.Designer.cs">
-      <DependentUpon>Frm_Cadastar_Livros.cs</DependentUpon>
+    <Compile Include="Frm_Cadastrar_Livros.Designer.cs">
+      <DependentUpon>Frm_Cadastrar_Livros.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Cadastrar_Funcionarios.cs">
       <SubType>Form</SubType>
@@ -112,11 +112,11 @@
     <Compile Include="Livros.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Frm_Cadastar_Clientes.resx">
-      <DependentUpon>Frm_Cadastar_Clientes.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Cadastrar_Clientes.resx">
+      <DependentUpon>Frm_Cadastrar_Clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Cadastar_Livros.resx">
-      <DependentUpon>Frm_Cadastar_Livros.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Cadastrar_Livros.resx">
+      <DependentUpon>Frm_Cadastrar_Livros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Cadastrar_Funcionarios.resx">
       <DependentUpon>Frm_Cadastrar_Funcionarios.cs</DependentUpon>

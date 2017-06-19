@@ -28,7 +28,7 @@ namespace Gerenciamento_Biblioteca
 
         private void tsbtnCadastrar_Click(object sender, EventArgs e)
         {
-            Frm_Cadastar_Livros objCadastrar_Livros = new Frm_Cadastar_Livros();
+            Frm_Cadastrar_Livros objCadastrar_Livros = new Frm_Cadastrar_Livros();
             objCadastrar_Livros.ShowDialog();
         }
 

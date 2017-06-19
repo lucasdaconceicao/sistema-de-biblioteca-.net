@@ -16,6 +16,7 @@ namespace Gerenciamento_Biblioteca
         public Frm_Consulta_Clientes()
         {
             InitializeComponent();
+            btnEditar.Enabled = false;
         }
 
         private void recarregarGrid()
@@ -69,11 +70,11 @@ namespace Gerenciamento_Biblioteca
                     }
                 }
                 txtNomeBusca.Clear();
+                btnEditar.Enabled = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro:. " + ex.Message);
-
             }
             finally
             {
@@ -90,6 +91,15 @@ namespace Gerenciamento_Biblioteca
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            // Pegando o código da linha selecionada.
+            int codigo = Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value.ToString());
+            Frm_Cadastrar_Clientes objCadastrarCliente = new Frm_Cadastrar_Clientes(codigo);
+            objCadastrarCliente.ShowDialog();
+            dgvClientes.Rows.Clear();
         }
     }
 }

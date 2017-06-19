@@ -33,7 +33,7 @@ namespace Gerenciamento_Biblioteca
 
         private void tsbtnCadastrar_Click(object sender, EventArgs e)
         {
-            Frm_Cadastar_Clientes objFrmCadastrarCliente = new Frm_Cadastar_Clientes();
+            Frm_Cadastrar_Clientes objFrmCadastrarCliente = new Frm_Cadastrar_Clientes();
             objFrmCadastrarCliente.ShowDialog();
         }
 

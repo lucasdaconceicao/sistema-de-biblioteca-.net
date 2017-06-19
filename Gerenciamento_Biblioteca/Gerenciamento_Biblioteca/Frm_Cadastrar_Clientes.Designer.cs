@@ -1,6 +1,6 @@
 ﻿namespace Gerenciamento_Biblioteca
 {
-    partial class Frm_Cadastar_Clientes
+    partial class Frm_Cadastrar_Clientes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cadastar_Clientes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cadastrar_Clientes));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbI = new System.Windows.Forms.RadioButton();
@@ -48,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
+            this.txtCod = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,7 +111,7 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(91, 33);
             this.btnCadastrar.TabIndex = 92;
-            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.Text = "SALVAR";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
@@ -247,12 +248,21 @@
             this.cbxEstado.TabIndex = 93;
             this.cbxEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxEstado_KeyPress);
             // 
-            // Frm_Cadastar_Clientes
+            // txtCod
+            // 
+            this.txtCod.Location = new System.Drawing.Point(332, 236);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(24, 20);
+            this.txtCod.TabIndex = 94;
+            this.txtCod.Visible = false;
+            // 
+            // Frm_Cadastrar_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(369, 470);
+            this.Controls.Add(this.txtCod);
             this.Controls.Add(this.cbxEstado);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel1);
@@ -271,7 +281,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Frm_Cadastar_Clientes";
+            this.Name = "Frm_Cadastrar_Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Cliente";
             this.panel1.ResumeLayout(false);
@@ -302,5 +312,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.ComboBox cbxEstado;
+        private System.Windows.Forms.TextBox txtCod;
     }
 }
