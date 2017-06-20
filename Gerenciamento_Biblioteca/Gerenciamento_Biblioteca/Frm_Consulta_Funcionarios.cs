@@ -13,15 +13,17 @@ namespace Gerenciamento_Biblioteca
 {
     public partial class Frm_Consulta_Funcionarios : Form
     {
+        //conexao com o bd
+        MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=lucas;Pwd=root;");
         public Frm_Consulta_Funcionarios()
         {
             InitializeComponent();
+            btnEditar.Enabled = false;
+            btnExcluir.Enabled = false;
         }
 
         private void recarregarGrid()
         {
-            //conexao com o bd
-            MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=lucas;Pwd=root;");
             try
             {
                 //verificando se o campo da busca nao esta vazio
@@ -30,8 +32,6 @@ namespace Gerenciamento_Biblioteca
                     MessageBox.Show("O campo para busca nao pode ser vazio!");
                     return;
                 }
-                //Limpa os dados da grid
-                dgvFuncionario.Rows.Clear();
 
                 //abrindo a conexao com o bd
                 conn.Open();
@@ -56,6 +56,8 @@ namespace Gerenciamento_Biblioteca
                         txtNomeBusca.Clear();
                         return;
                     }
+                    //limpar linhas grid
+                    dgvFuncionario.Rows.Clear();
 
                     //Percorrendo a consulta e adicionando os valores em cada linha
                     while (MysqlReader.Read())
@@ -69,6 +71,8 @@ namespace Gerenciamento_Biblioteca
                     }
                 }
                 txtNomeBusca.Clear();
+                btnEditar.Enabled = true;
+                btnExcluir.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -89,6 +93,52 @@ namespace Gerenciamento_Biblioteca
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            // Pegando o código da linha selecionada.
+            int codigo = Convert.ToInt32(dgvFuncionario.CurrentRow.Cells[0].Value.ToString());
+            Frm_Cadastrar_Funcionarios objCadastrarFuncionario = new Frm_Cadastrar_Funcionarios(codigo);
+            objCadastrarFuncionario.ShowDialog();
+            dgvFuncionario.Rows.Clear();
+            btnEditar.Enabled = false;
+            btnExcluir.Enabled = false;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int codigo = Convert.ToInt32(dgvFuncionario.CurrentRow.Cells[0].Value.ToString());
+                //abrindo a conexao com o bd
+                conn.Open();
+
+                if (conn.State == ConnectionState.Open)
+                {
+                    MySqlCommand comando = conn.CreateCommand();
+                    string consulta = "DELETE FROM FUNCIONARIOS WHERE ID_FUNCIONARIO=" + codigo + "";
+                    comando.CommandText = consulta;
+
+                    //se executo o comando com sucesso
+                    if (comando.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Funcionario excluido com sucesso!");
+                        dgvFuncionario.Rows.Clear();
+                        btnEditar.Enabled = false;
+                        btnExcluir.Enabled = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro:. " + ex.Message);
+            }
+            finally
+            {
+                //fechando a conexao com o banco de dados
+                conn.Close();
+            }
         }
     }
 }

@@ -196,6 +196,7 @@
             this.btnExcluir.TabIndex = 85;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // Frm_Consulta_Livros
             // 

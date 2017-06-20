@@ -102,6 +102,12 @@
     <Compile Include="Frm_Livros.Designer.cs">
       <DependentUpon>Frm_Livros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Emprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Emprestimo.Designer.cs">
+      <DependentUpon>Frm_Emprestimo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Livros.resx">
       <DependentUpon>Frm_Livros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Emprestimo.resx">
+      <DependentUpon>Frm_Emprestimo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Principal.resx">
       <DependentUpon>Frm_Principal.cs</DependentUpon>

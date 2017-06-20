@@ -43,7 +43,7 @@ namespace Gerenciamento_Biblioteca
                 {
                     //consulta no bd
                     MySqlCommand comando = conn.CreateCommand();
-                    string consulta = "SELECT * FROM LIVROS WHERE NOME_LIVRO LIKE'%"+txtNome_Busca.Text+"%'" ;
+                    string consulta = "SELECT * FROM LIVROS WHERE NOME_LIVRO LIKE'%" + txtNome_Busca.Text + "%'";
                     comando.CommandText = consulta;
 
                     //retornando os dados da query
@@ -94,7 +94,6 @@ namespace Gerenciamento_Biblioteca
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
-
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -106,6 +105,41 @@ namespace Gerenciamento_Biblioteca
             dgv_Livros.Rows.Clear();
             btnEditar.Enabled = false;
             btnExcluir.Enabled = false;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Pegando o código da linha selecionada.
+                int codigo = Convert.ToInt32(dgv_Livros.CurrentRow.Cells[0].Value.ToString());
+                //abrindo a conexao com o bd
+                conn.Open();
+                //teste se esta aberto
+                if (conn.State == ConnectionState.Open)
+                {
+                    MySqlCommand comando = conn.CreateCommand();
+                    string consulta = "DELETE FROM LIVROS WHERE ID_LIVRO=" + codigo + "";
+                    comando.CommandText = consulta;
+                    //se executo o comando com sucesso
+                    if (comando.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Livro excluido com sucesso!");
+                        dgv_Livros.Rows.Clear();
+                        btnEditar.Enabled = false;
+                        btnExcluir.Enabled = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro:. " + ex.Message);
+            }
+            finally
+            {
+                //fechando a conexao com o banco de dados
+                conn.Close();
+            }
         }
     }
 }

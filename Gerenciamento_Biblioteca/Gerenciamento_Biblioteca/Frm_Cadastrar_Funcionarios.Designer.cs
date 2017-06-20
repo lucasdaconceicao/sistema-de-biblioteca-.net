@@ -48,6 +48,7 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
+            this.txtCod = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -242,12 +243,21 @@
             this.cbxEstado.TabIndex = 94;
             this.cbxEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxEstado_KeyPress);
             // 
+            // txtCod
+            // 
+            this.txtCod.Location = new System.Drawing.Point(304, 230);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(44, 20);
+            this.txtCod.TabIndex = 95;
+            this.txtCod.Visible = false;
+            // 
             // Frm_Cadastrar_Funcionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(369, 470);
+            this.Controls.Add(this.txtCod);
             this.Controls.Add(this.cbxEstado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);
@@ -298,5 +308,6 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbxEstado;
+        private System.Windows.Forms.TextBox txtCod;
     }
 }

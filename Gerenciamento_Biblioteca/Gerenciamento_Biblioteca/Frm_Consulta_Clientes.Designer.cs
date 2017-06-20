@@ -62,6 +62,7 @@
             this.STATUS,
             this.CPF});
             this.dgvClientes.Location = new System.Drawing.Point(1, 80);
+            this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
