@@ -51,5 +51,11 @@ namespace Gerenciamento_Biblioteca
                 this.Dispose();
             }
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Frm_Emprestimo objEmprestimo = new Frm_Emprestimo();
+            objEmprestimo.ShowDialog();
+        }
     }
 }

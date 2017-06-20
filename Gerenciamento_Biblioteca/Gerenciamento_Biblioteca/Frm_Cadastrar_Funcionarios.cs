@@ -30,6 +30,7 @@ namespace Gerenciamento_Biblioteca
 
         private void buscaDados(int cod)
         {
+            //quando vem do formulario consulta para editar
             try
             {
                 //abrindo a conexao com o bd
