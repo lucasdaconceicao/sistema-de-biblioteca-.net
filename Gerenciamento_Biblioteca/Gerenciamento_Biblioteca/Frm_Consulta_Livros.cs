@@ -13,15 +13,17 @@ namespace Gerenciamento_Biblioteca
 {
     public partial class Frm_Consulta_Livros : Form
     {
+        //conexao com o bd
+        MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=lucas;Pwd=root;");
         public Frm_Consulta_Livros()
         {
             InitializeComponent();
+            btnEditar.Enabled = false;
+            btnExcluir.Enabled = false;
         }
 
         private void recarregarGrid()
         {
-            //conexao com o bd
-            MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=lucas;Pwd=root;");
             try
             {
                 //verificando se o campo da busca nao esta vazio
@@ -30,9 +32,6 @@ namespace Gerenciamento_Biblioteca
                     MessageBox.Show("O campo para busca nao pode ser vazio!");
                     return;
                 }
-                
-                //Limpa os dados da grid
-                dgv_Livros.Rows.Clear();
 
                 //abrindo a conexao com o bd
                 conn.Open();
@@ -58,6 +57,9 @@ namespace Gerenciamento_Biblioteca
                         return;
                     }
 
+                    //Limpa os dados da grid
+                    dgv_Livros.Rows.Clear();
+
                     //Percorrendo a consulta e adicionando os valores em cada linha
                     while (MysqlReader.Read())
                     {
@@ -70,6 +72,8 @@ namespace Gerenciamento_Biblioteca
                     }
                 }
                 txtNome_Busca.Clear();
+                btnEditar.Enabled = true;
+                btnExcluir.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -91,6 +95,17 @@ namespace Gerenciamento_Biblioteca
         {
             this.Dispose();
 
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            // Pegando o código da linha selecionada.
+            int codigo = Convert.ToInt32(dgv_Livros.CurrentRow.Cells[0].Value.ToString());
+            Frm_Cadastrar_Livros objCadastrarLivros = new Frm_Cadastrar_Livros(codigo);
+            objCadastrarLivros.ShowDialog();
+            dgv_Livros.Rows.Clear();
+            btnEditar.Enabled = false;
+            btnExcluir.Enabled = false;
         }
     }
 }

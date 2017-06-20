@@ -13,15 +13,77 @@ namespace Gerenciamento_Biblioteca
 {
     public partial class Frm_Cadastrar_Livros : Form
     {
+        //conexao com o bd
+        MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=lucas;Pwd=root;");
+        private int id;
         public Frm_Cadastrar_Livros()
         {
             InitializeComponent();
         }
 
+        public Frm_Cadastrar_Livros(int cod)
+        {
+            InitializeComponent();
+            this.id = cod;
+            buscaDados(this.id);
+        }
+
+        private void buscaDados(int cod)
+        {
+            try
+            {
+                //abrindo a conexao com o bd
+                conn.Open();
+
+                if (conn.State == ConnectionState.Open)
+                {
+                    //consulta no bd
+                    MySqlCommand comando = conn.CreateCommand();
+                    string consulta = "SELECT * FROM LIVROS WHERE ID_LIVRO=" + cod + "";
+                    comando.CommandText = consulta;
+                    //retornando os dados da query
+                    MySqlDataReader MysqlReader = comando.ExecuteReader();
+                    //Percorrendo a consulta e adicionando os valores em cada linha
+                    while (MysqlReader.Read())
+                    {
+                        object[] valores = new object[MysqlReader.FieldCount];
+                        for (int i = 0; i < MysqlReader.FieldCount; i++)
+                        {
+                            valores[i] = MysqlReader.GetValue(i);
+                        }
+                        txtCod.Text = valores[0].ToString();
+                        txtNome.Text = valores[1].ToString();
+                        txtAutor.Text = valores[2].ToString();
+                        txtAno.Text = valores[3].ToString();
+                        txtGenero.Text = valores[4].ToString();
+                        txtEditora.Text = valores[5].ToString();
+                        txtPaginas.Text = valores[6].ToString();
+                        txtIsbn.Text = valores[8].ToString();
+
+                        char status = Convert.ToChar(valores[7]);
+                        if (status == 'I')
+                        {
+                            rbI.Checked = true;
+                        }
+                        else
+                        {
+                            rbD.Checked = true;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro:. " + ex.Message);
+            }
+            finally
+            {
+                //fechando a conexao com o banco de dados
+                conn.Close();
+            }
+        }
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            //conexao com o bd
-            MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=lucas;Pwd=root;");
             try
             {
                 Livros livro = new Livros();
@@ -48,24 +110,48 @@ namespace Gerenciamento_Biblioteca
                 //teste se esta aberto
                 if (conn.State == ConnectionState.Open)
                 {
-                    //comando para insercao no bd
-                    MySqlCommand comando = conn.CreateCommand();
-                    string consulta = "INSERT INTO LIVROS (NOME_LIVRO,AUTOR_LIVRO,ANO_LIVRO,GENERO_LIVRO,EDITORA_LIVRO,PAGINAS_LIVRO,STATUS_LIVRO,ISBN_LIVRO) VALUES (?NOME,?AUTOR,?ANO,?GENERO,?EDITORA,?PAGINAS,?STATUS,?ISBN)";
-                    comando.CommandText = consulta;
-                    comando.Parameters.AddWithValue("?NOME", livro.Nome);
-                    comando.Parameters.AddWithValue("?AUTOR", livro.Autor);
-                    comando.Parameters.AddWithValue("?ANO", livro.Ano);
-                    comando.Parameters.AddWithValue("?GENERO", livro.Genero);
-                    comando.Parameters.AddWithValue("?EDITORA", livro.Editora);
-                    comando.Parameters.AddWithValue("?PAGINAS", livro.Paginas);
-                    comando.Parameters.AddWithValue("?STATUS", livro.Status);
-                    comando.Parameters.AddWithValue("?ISBN", livro.Isbn);
-
-                    //se executo o comando com sucesso
-                    if (comando.ExecuteNonQuery() > 0)
+                    if (String.IsNullOrEmpty(txtCod.Text))
                     {
-                        MessageBox.Show("Livro cadastrado com sucesso!");
-                        LimparCampos();
+                        //comando para insercao no bd
+                        MySqlCommand comando = conn.CreateCommand();
+                        string consulta = "INSERT INTO LIVROS (NOME_LIVRO,AUTOR_LIVRO,ANO_LIVRO,GENERO_LIVRO,EDITORA_LIVRO,PAGINAS_LIVRO,STATUS_LIVRO,ISBN_LIVRO) VALUES (?NOME,?AUTOR,?ANO,?GENERO,?EDITORA,?PAGINAS,?STATUS,?ISBN)";
+                        comando.CommandText = consulta;
+                        comando.Parameters.AddWithValue("?NOME", livro.Nome);
+                        comando.Parameters.AddWithValue("?AUTOR", livro.Autor);
+                        comando.Parameters.AddWithValue("?ANO", livro.Ano);
+                        comando.Parameters.AddWithValue("?GENERO", livro.Genero);
+                        comando.Parameters.AddWithValue("?EDITORA", livro.Editora);
+                        comando.Parameters.AddWithValue("?PAGINAS", livro.Paginas);
+                        comando.Parameters.AddWithValue("?STATUS", livro.Status);
+                        comando.Parameters.AddWithValue("?ISBN", livro.Isbn);
+
+                        //se executo o comando com sucesso
+                        if (comando.ExecuteNonQuery() > 0)
+                        {
+                            MessageBox.Show("Livro cadastrado com sucesso!");
+                            LimparCampos();
+                        }
+                    }
+                    else
+                    {
+                        //comando para update no bd
+                        MySqlCommand comando = conn.CreateCommand();
+                        string consulta = "UPDATE LIVROS SET NOME_LIVRO=?NOME,AUTOR_LIVRO=?AUTOR,ANO_LIVRO=?ANO,GENERO_LIVRO=?GENERO,EDITORA_LIVRO=?EDITORA,PAGINAS_LIVRO=?PAGINAS,STATUS_LIVRO=?STATUS,ISBN_LIVRO=?ISBN WHERE ID_LIVRO=" + this.id + "";
+                        comando.CommandText = consulta;
+                        comando.Parameters.AddWithValue("?NOME", livro.Nome);
+                        comando.Parameters.AddWithValue("?AUTOR", livro.Autor);
+                        comando.Parameters.AddWithValue("?ANO", livro.Ano);
+                        comando.Parameters.AddWithValue("?GENERO", livro.Genero);
+                        comando.Parameters.AddWithValue("?EDITORA", livro.Editora);
+                        comando.Parameters.AddWithValue("?PAGINAS", livro.Paginas);
+                        comando.Parameters.AddWithValue("?STATUS", livro.Status);
+                        comando.Parameters.AddWithValue("?ISBN", livro.Isbn);
+
+                        if (comando.ExecuteNonQuery() > 0)
+                        {
+                            MessageBox.Show("Livro alterado com sucesso!");
+                            this.Dispose();
+                        }
                     }
                 }
             }

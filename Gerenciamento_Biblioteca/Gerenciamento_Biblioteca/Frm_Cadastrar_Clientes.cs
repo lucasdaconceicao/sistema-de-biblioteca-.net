@@ -16,6 +16,7 @@ namespace Gerenciamento_Biblioteca
     {
         //conexao com o bd
         MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=lucas;Pwd=root;");
+
         private int id;
         public Frm_Cadastrar_Clientes()
         {
@@ -147,7 +148,7 @@ namespace Gerenciamento_Biblioteca
                     {
                         //comando para update no bd
                         MySqlCommand comando = conn.CreateCommand();
-                        string consulta = "UPDATE CLIENTES SET NOME_CLIENTE=?NOME && ENDERECO_CLIENTE=?ENDERECO && CIDADE_CLIENTE=?CIDADE && ESTADO_CLIENTE=?ESTADO && TELEFONE_CLIENTE=?TELEFONE && STATUS_CLIENTE=?STATUS && CPF=?CPF WHERE ID_CLIENTE=" + this.id + "";
+                        string consulta = "UPDATE CLIENTES SET NOME_CLIENTE=?NOME,ENDERECO_CLIENTE=?ENDERECO,CIDADE_CLIENTE=?CIDADE,ESTADO_CLIENTE=?ESTADO,TELEFONE_CLIENTE=?TELEFONE,STATUS_CLIENTE=?STATUS,CPF=?CPF WHERE ID_CLIENTE=" + this.id + "";
                         comando.CommandText = consulta;
                         comando.Parameters.AddWithValue("?NOME", cliente.Nome);
                         comando.Parameters.AddWithValue("?ENDERECO", cliente.Endereco);

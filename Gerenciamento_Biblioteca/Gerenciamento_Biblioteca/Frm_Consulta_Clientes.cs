@@ -13,16 +13,17 @@ namespace Gerenciamento_Biblioteca
 {
     public partial class Frm_Consulta_Clientes : Form
     {
+        //conexao com o bd
+        MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=lucas;Pwd=root;");
         public Frm_Consulta_Clientes()
         {
             InitializeComponent();
             btnEditar.Enabled = false;
+            btnExcluir.Enabled = false;
         }
 
         private void recarregarGrid()
         {
-            //conexao com o bd
-            MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=lucas;Pwd=root;");
             try
             {
                 //verificando se o campo da busca nao esta vazio
@@ -31,8 +32,6 @@ namespace Gerenciamento_Biblioteca
                     MessageBox.Show("O campo para busca nao pode ser vazio!");
                     return;
                 }
-                //Limpa os dados da grid
-                dgvClientes.Rows.Clear();
 
                 //abrindo a conexao com o bd
                 conn.Open();
@@ -58,6 +57,9 @@ namespace Gerenciamento_Biblioteca
                         return;
                     }
 
+                    //Limpa os dados da grid
+                    dgvClientes.Rows.Clear();
+
                     //Percorrendo a consulta e adicionando os valores em cada linha
                     while (MysqlReader.Read())
                     {
@@ -71,6 +73,7 @@ namespace Gerenciamento_Biblioteca
                 }
                 txtNomeBusca.Clear();
                 btnEditar.Enabled = true;
+                btnExcluir.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -100,6 +103,46 @@ namespace Gerenciamento_Biblioteca
             Frm_Cadastrar_Clientes objCadastrarCliente = new Frm_Cadastrar_Clientes(codigo);
             objCadastrarCliente.ShowDialog();
             dgvClientes.Rows.Clear();
+            btnEditar.Enabled = false;
+            btnExcluir.Enabled = false;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int codigo = Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value.ToString());
+
+                //abrindo a conexao com o bd
+                conn.Open();
+
+                //teste se esta aberto
+                if (conn.State == ConnectionState.Open)
+                {
+                    MySqlCommand comando = conn.CreateCommand();
+                    string consulta = "DELETE FROM CLIENTES WHERE ID_CLIENTE=" + codigo + "";
+                    comando.CommandText = consulta;
+
+                    //se executo o comando com sucesso
+                    if (comando.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Cliente excluido com sucesso!");
+                        dgvClientes.Rows.Clear();
+                        btnEditar.Enabled = false;
+                        btnExcluir.Enabled = false;
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro:. " + ex.Message);
+            }
+            finally
+            {
+                //fechando a conexao com o banco de dados
+                conn.Close();
+            }
         }
     }
 }

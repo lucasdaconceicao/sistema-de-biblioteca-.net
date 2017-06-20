@@ -52,6 +52,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtCod = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -260,12 +261,21 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // Frm_Cadastar_Livros
+            // txtCod
+            // 
+            this.txtCod.Location = new System.Drawing.Point(312, 233);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(27, 20);
+            this.txtCod.TabIndex = 74;
+            this.txtCod.Visible = false;
+            // 
+            // Frm_Cadastrar_Livros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(369, 470);
+            this.Controls.Add(this.txtCod);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel1);
@@ -288,7 +298,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Frm_Cadastar_Livros";
+            this.Name = "Frm_Cadastrar_Livros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Livros";
             this.panel1.ResumeLayout(false);
@@ -323,5 +333,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtCod;
     }
 }

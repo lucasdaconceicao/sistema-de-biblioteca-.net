@@ -43,6 +43,7 @@
             this.btnBusca = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,7 +126,6 @@
             this.CPF.HeaderText = "CPF";
             this.CPF.Name = "CPF";
             this.CPF.ReadOnly = true;
-            this.CPF.Width = 140;
             // 
             // label1
             // 
@@ -175,11 +175,23 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnExcluir.Location = new System.Drawing.Point(25, 416);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(80, 33);
+            this.btnExcluir.TabIndex = 84;
+            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // Frm_Consulta_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 461);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label1);
@@ -214,5 +226,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONE;
         private System.Windows.Forms.DataGridViewTextBoxColumn STATUS;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

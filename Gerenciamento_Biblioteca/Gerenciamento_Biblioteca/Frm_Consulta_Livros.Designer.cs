@@ -42,8 +42,9 @@
             this.txtNome_Busca = new System.Windows.Forms.TextBox();
             this.btnbusca = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Livros)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,15 +165,16 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Digite o nome do livro aqui";
             // 
-            // btnCadastrar
+            // btnEditar
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnCadastrar.Location = new System.Drawing.Point(596, 416);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(91, 33);
-            this.btnCadastrar.TabIndex = 75;
-            this.btnCadastrar.Text = "EDITAR";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnEditar.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnEditar.Location = new System.Drawing.Point(596, 416);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(91, 33);
+            this.btnEditar.TabIndex = 75;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCancelar
             // 
@@ -185,12 +187,23 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnExcluir.Location = new System.Drawing.Point(12, 416);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(80, 33);
+            this.btnExcluir.TabIndex = 85;
+            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            // 
             // Frm_Consulta_Livros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 461);
-            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnbusca);
@@ -214,7 +227,7 @@
         private System.Windows.Forms.TextBox txtNome_Busca;
         private System.Windows.Forms.Button btnbusca;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
@@ -225,5 +238,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PAG;
         private System.Windows.Forms.DataGridViewTextBoxColumn STATUS;
         private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }
