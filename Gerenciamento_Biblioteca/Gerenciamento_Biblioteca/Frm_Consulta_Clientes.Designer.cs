@@ -61,7 +61,7 @@
             this.TELEFONE,
             this.STATUS,
             this.CPF});
-            this.dgvClientes.Location = new System.Drawing.Point(1, 80);
+            this.dgvClientes.Location = new System.Drawing.Point(1, 66);
             this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
@@ -70,7 +70,7 @@
             this.dgvClientes.ShowCellToolTips = false;
             this.dgvClientes.ShowEditingIcon = false;
             this.dgvClientes.ShowRowErrors = false;
-            this.dgvClientes.Size = new System.Drawing.Size(722, 310);
+            this.dgvClientes.Size = new System.Drawing.Size(722, 324);
             this.dgvClientes.TabIndex = 0;
             // 
             // ID
@@ -131,21 +131,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(59, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 13);
+            this.label1.Size = new System.Drawing.Size(173, 16);
             this.label1.TabIndex = 81;
             this.label1.Text = "Digite o nome do cliente aqui";
             // 
             // txtNomeBusca
             // 
-            this.txtNomeBusca.Location = new System.Drawing.Point(46, 36);
+            this.txtNomeBusca.Location = new System.Drawing.Point(46, 40);
             this.txtNomeBusca.Name = "txtNomeBusca";
             this.txtNomeBusca.Size = new System.Drawing.Size(276, 20);
             this.txtNomeBusca.TabIndex = 80;
             // 
             // btnBusca
             // 
+            this.btnBusca.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBusca.Location = new System.Drawing.Point(328, 30);
             this.btnBusca.Name = "btnBusca";
             this.btnBusca.Size = new System.Drawing.Size(80, 30);
@@ -157,6 +159,7 @@
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnEditar.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(621, 416);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(91, 33);
@@ -168,6 +171,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Cyan;
+            this.btnCancelar.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(534, 416);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 33);
@@ -179,6 +183,7 @@
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnExcluir.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Location = new System.Drawing.Point(25, 416);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(80, 33);

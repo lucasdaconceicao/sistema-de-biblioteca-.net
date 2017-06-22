@@ -55,31 +55,34 @@
             // 
             // tsbtnCadastrar
             // 
+            this.tsbtnCadastrar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbtnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnCadastrar.Image")));
             this.tsbtnCadastrar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnCadastrar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnCadastrar.Name = "tsbtnCadastrar";
-            this.tsbtnCadastrar.Size = new System.Drawing.Size(109, 52);
+            this.tsbtnCadastrar.Size = new System.Drawing.Size(124, 52);
             this.tsbtnCadastrar.Text = "Cadastrar";
             this.tsbtnCadastrar.Click += new System.EventHandler(this.tsbtnCadastrar_Click);
             // 
             // tsbtnConsultar
             // 
+            this.tsbtnConsultar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbtnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnConsultar.Image")));
             this.tsbtnConsultar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnConsultar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnConsultar.Name = "tsbtnConsultar";
-            this.tsbtnConsultar.Size = new System.Drawing.Size(110, 52);
+            this.tsbtnConsultar.Size = new System.Drawing.Size(123, 52);
             this.tsbtnConsultar.Text = "Consultar";
             this.tsbtnConsultar.Click += new System.EventHandler(this.tsbtnConsultar_Click);
             // 
             // tsbtnVoltar
             // 
+            this.tsbtnVoltar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbtnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnVoltar.Image")));
             this.tsbtnVoltar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnVoltar.Name = "tsbtnVoltar";
-            this.tsbtnVoltar.Size = new System.Drawing.Size(90, 52);
+            this.tsbtnVoltar.Size = new System.Drawing.Size(101, 52);
             this.tsbtnVoltar.Text = "Voltar";
             this.tsbtnVoltar.Click += new System.EventHandler(this.tsbtnVoltar_Click);
             // 
@@ -97,14 +100,14 @@
             // 
             // tsbtnSair
             // 
-            this.tsbtnSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnSair.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbtnSair.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnSair.Image")));
             this.tsbtnSair.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnSair.Name = "tsbtnSair";
             this.tsbtnSair.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.tsbtnSair.Size = new System.Drawing.Size(57, 52);
-            this.tsbtnSair.Text = "toolStripButton5";
+            this.tsbtnSair.Size = new System.Drawing.Size(87, 52);
+            this.tsbtnSair.Text = "Sair";
             this.tsbtnSair.Click += new System.EventHandler(this.tsbtnSair_Click);
             // 
             // Frm_Clientes

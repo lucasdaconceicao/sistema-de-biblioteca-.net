@@ -57,41 +57,45 @@
             // 
             // tsbtnClientes
             // 
+            this.tsbtnClientes.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbtnClientes.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnClientes.Image")));
             this.tsbtnClientes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnClientes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnClientes.Name = "tsbtnClientes";
-            this.tsbtnClientes.Size = new System.Drawing.Size(101, 52);
+            this.tsbtnClientes.Size = new System.Drawing.Size(113, 52);
             this.tsbtnClientes.Text = "Clientes";
             this.tsbtnClientes.Click += new System.EventHandler(this.tsbtnClientes_Click);
             // 
             // tsbtnFuncionarios
             // 
+            this.tsbtnFuncionarios.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbtnFuncionarios.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnFuncionarios.Image")));
             this.tsbtnFuncionarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnFuncionarios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnFuncionarios.Name = "tsbtnFuncionarios";
-            this.tsbtnFuncionarios.Size = new System.Drawing.Size(127, 52);
+            this.tsbtnFuncionarios.Size = new System.Drawing.Size(144, 52);
             this.tsbtnFuncionarios.Text = "Funcionarios";
             this.tsbtnFuncionarios.Click += new System.EventHandler(this.tsbtnFuncionarios_Click);
             // 
             // tsbtnLivros
             // 
+            this.tsbtnLivros.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbtnLivros.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnLivros.Image")));
             this.tsbtnLivros.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnLivros.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnLivros.Name = "tsbtnLivros";
-            this.tsbtnLivros.Size = new System.Drawing.Size(90, 52);
+            this.tsbtnLivros.Size = new System.Drawing.Size(99, 52);
             this.tsbtnLivros.Text = "Livros";
             this.tsbtnLivros.Click += new System.EventHandler(this.tsbtnLivros_Click);
             // 
             // toolStripButton1
             // 
+            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(103, 52);
+            this.toolStripButton1.Size = new System.Drawing.Size(116, 52);
             this.toolStripButton1.Text = "Locação";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -109,12 +113,13 @@
             // 
             // tsbtnSair
             // 
+            this.tsbtnSair.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbtnSair.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnSair.Image")));
             this.tsbtnSair.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnSair.Name = "tsbtnSair";
             this.tsbtnSair.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.tsbtnSair.Size = new System.Drawing.Size(83, 52);
+            this.tsbtnSair.Size = new System.Drawing.Size(87, 52);
             this.tsbtnSair.Text = "Sair";
             this.tsbtnSair.Click += new System.EventHandler(this.tsbtnSair_Click);
             // 

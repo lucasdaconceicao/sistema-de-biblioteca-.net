@@ -54,6 +54,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Cyan;
+            this.btnCancelar.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(178, 427);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 33);
@@ -65,6 +66,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnCadastrar.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.Location = new System.Drawing.Point(265, 427);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(91, 33);
@@ -75,10 +77,10 @@
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(20, 139);
+            this.txtTelefone.Location = new System.Drawing.Point(20, 144);
             this.txtTelefone.MaxLength = 12;
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(144, 20);
+            this.txtTelefone.Size = new System.Drawing.Size(144, 21);
             this.txtTelefone.TabIndex = 89;
             this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
             // 
@@ -87,31 +89,32 @@
             this.txtEndereco.Location = new System.Drawing.Point(20, 93);
             this.txtEndereco.MaxLength = 50;
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(328, 20);
+            this.txtEndereco.Size = new System.Drawing.Size(328, 21);
             this.txtEndereco.TabIndex = 88;
             // 
             // txtCargo
             // 
-            this.txtCargo.Location = new System.Drawing.Point(185, 183);
+            this.txtCargo.Location = new System.Drawing.Point(185, 187);
             this.txtCargo.MaxLength = 30;
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(163, 20);
+            this.txtCargo.Size = new System.Drawing.Size(163, 21);
             this.txtCargo.TabIndex = 84;
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(20, 183);
+            this.txtCidade.Location = new System.Drawing.Point(20, 188);
             this.txtCidade.MaxLength = 50;
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(144, 20);
+            this.txtCidade.Size = new System.Drawing.Size(144, 21);
             this.txtCidade.TabIndex = 83;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 123);
+            this.label7.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(20, 128);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 13);
+            this.label7.Size = new System.Drawing.Size(145, 16);
             this.label7.TabIndex = 82;
             this.label7.Text = "Telefone do funcionario";
             // 
@@ -138,54 +141,59 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(185, 168);
+            this.label3.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(185, 172);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 13);
+            this.label3.Size = new System.Drawing.Size(129, 16);
             this.label3.TabIndex = 85;
             this.label3.Text = "Cargo do funcionario";
             // 
             // txtCpf
             // 
-            this.txtCpf.Location = new System.Drawing.Point(185, 139);
+            this.txtCpf.Location = new System.Drawing.Point(185, 144);
             this.txtCpf.MaxLength = 11;
             this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(163, 20);
+            this.txtCpf.Size = new System.Drawing.Size(163, 21);
             this.txtCpf.TabIndex = 79;
             this.txtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCpf_KeyPress);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(185, 123);
+            this.label6.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(185, 128);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 13);
+            this.label6.Size = new System.Drawing.Size(115, 16);
             this.label6.TabIndex = 78;
             this.label6.Text = "Cpf do funcionario";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 167);
+            this.label5.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(20, 172);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 13);
+            this.label5.Size = new System.Drawing.Size(135, 16);
             this.label5.TabIndex = 77;
             this.label5.Text = "Cidade do funcionario";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(20, 77);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 13);
+            this.label4.Size = new System.Drawing.Size(147, 16);
             this.label4.TabIndex = 76;
             this.label4.Text = "Endereco do funcionario";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(20, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 13);
+            this.label1.Size = new System.Drawing.Size(129, 16);
             this.label1.TabIndex = 74;
             this.label1.Text = "Nome do funcionario";
             // 
@@ -194,15 +202,16 @@
             this.txtNome.Location = new System.Drawing.Point(20, 45);
             this.txtNome.MaxLength = 100;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(328, 20);
+            this.txtNome.Size = new System.Drawing.Size(328, 21);
             this.txtNome.TabIndex = 75;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 214);
+            this.label2.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(20, 217);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 13);
+            this.label2.Size = new System.Drawing.Size(133, 16);
             this.label2.TabIndex = 93;
             this.label2.Text = "Estado do funcionario";
             // 
@@ -237,7 +246,7 @@
             "São Paulo (SP)",
             "Sergipe (SE)",
             "Tocantins (TO)"});
-            this.cbxEstado.Location = new System.Drawing.Point(20, 230);
+            this.cbxEstado.Location = new System.Drawing.Point(20, 233);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(141, 21);
             this.cbxEstado.TabIndex = 94;
@@ -247,7 +256,7 @@
             // 
             this.txtCod.Location = new System.Drawing.Point(304, 230);
             this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(44, 20);
+            this.txtCod.Size = new System.Drawing.Size(44, 21);
             this.txtCod.TabIndex = 95;
             this.txtCod.Visible = false;
             // 
@@ -276,6 +285,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNome);
+            this.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
