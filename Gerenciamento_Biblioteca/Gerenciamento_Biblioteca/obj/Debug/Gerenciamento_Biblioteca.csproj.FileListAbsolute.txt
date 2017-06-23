@@ -30,3 +30,6 @@ C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\
 C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.Frm_Emprestimo.resources
 C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.Frm_Cadastrar_Emprestimo.resources
 C:\Users\lucas\Documents\Visual Studio 2015\Projects\sistema-de-biblioteca-.net\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.Frm_Consulta_Emprestimo.resources
+C:\Users\lucas\Downloads\sistema-de-biblioteca-.net-master\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\bin\Debug\Gerenciamento_Biblioteca.exe.config
+C:\Users\lucas\Downloads\sistema-de-biblioteca-.net-master\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.exe
+C:\Users\lucas\Downloads\sistema-de-biblioteca-.net-master\Gerenciamento_Biblioteca\Gerenciamento_Biblioteca\obj\Debug\Gerenciamento_Biblioteca.pdb
