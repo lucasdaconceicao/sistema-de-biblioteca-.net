@@ -127,6 +127,12 @@
     <Compile Include="Frm_Principal.Designer.cs">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Splash.Designer.cs">
+      <DependentUpon>Frm_Splash.cs</DependentUpon>
+    </Compile>
     <Compile Include="Funcionarios.cs" />
     <Compile Include="Livros.cs" />
     <Compile Include="Program.cs" />
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Principal.resx">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Splash.resx">
+      <DependentUpon>Frm_Splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
