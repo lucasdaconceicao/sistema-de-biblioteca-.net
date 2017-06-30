@@ -19,6 +19,7 @@ namespace Gerenciamento_Biblioteca
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            //botao sair
             if (MessageBox.Show("Você tem certeza que deseja sair do sistema?", "Mensagem do Sistema",
              MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -33,12 +34,14 @@ namespace Gerenciamento_Biblioteca
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
+            //iniciar fomulario de cadastrar emprestimo 
             Frm_Cadastrar_Emprestimo objCadastrarEmprestimo = new Frm_Cadastrar_Emprestimo();
             objCadastrarEmprestimo.ShowDialog();
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+            //iniciar fomulario de consultar emprestimo 
             Frm_Consulta_Emprestimo objConsultaEmprestimo = new Frm_Consulta_Emprestimo();
             objConsultaEmprestimo.ShowDialog();
         }

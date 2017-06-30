@@ -10,6 +10,7 @@ namespace Gerenciamento_Biblioteca
     {
         int _codigo_usuarios;
         int _codigo_livros;
+        //pega somente a data de hoje 
         DateTime _dataAgora = DateTime.Today;
         DateTime _dataEmprestimo;
 

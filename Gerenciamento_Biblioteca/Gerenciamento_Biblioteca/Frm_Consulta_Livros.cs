@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,17 +14,30 @@ namespace Gerenciamento_Biblioteca
 {
     public partial class Frm_Consulta_Livros : Form
     {
-        //conexao com o bd
-        MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=lucas;Pwd=root;");
+        private string Stringconexao;
+        
         public Frm_Consulta_Livros()
         {
             InitializeComponent();
             btnEditar.Enabled = false;
             btnExcluir.Enabled = false;
+            LerStringConexao();
+        }
+     
+        private void LerStringConexao()
+        {
+            //caminho dos dados da string de conexao
+            string caminhoStringConexao = Application.StartupPath + "/stringConexao.txt";
+            StreamReader reader = new StreamReader(caminhoStringConexao);
+            //Lendo o arquivo de texto com os dados de login
+            string linha = reader.ReadLine();
+            this.Stringconexao = linha;
         }
 
         private void recarregarGrid()
         {
+            //conexao com o banco de dados
+            MySqlConnection conn = new MySqlConnection(this.Stringconexao);
             try
             {
                 //verificando se o campo da busca nao esta vazio
@@ -41,7 +55,7 @@ namespace Gerenciamento_Biblioteca
 
                 if (conn.State == ConnectionState.Open)
                 {
-                    //consulta no bd
+                    //consulta no banco de dados
                     MySqlCommand comando = conn.CreateCommand();
                     string consulta = "SELECT * FROM LIVROS WHERE NOME_LIVRO LIKE'%" + txtNome_Busca.Text + "%'";
                     comando.CommandText = consulta;
@@ -109,11 +123,13 @@ namespace Gerenciamento_Biblioteca
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            //conexao com o banco de dados
+            MySqlConnection conn = new MySqlConnection(this.Stringconexao);
             try
             {
                 // Pegando o código da linha selecionada.
                 int codigo = Convert.ToInt32(dgv_Livros.CurrentRow.Cells[0].Value.ToString());
-                //abrindo a conexao com o bd
+                //abrindo a conexao com o banco de dados
                 conn.Open();
                 //teste se esta aberto
                 if (conn.State == ConnectionState.Open)

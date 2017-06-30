@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,42 +14,64 @@ namespace Gerenciamento_Biblioteca
 {
     public partial class Frm_Cadastrar_Livros : Form
     {
-        //conexao com o bd
-        MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=lucas;Pwd=root;");
+        private string Stringconexao;
+
         private int id;
         public Frm_Cadastrar_Livros()
         {
             InitializeComponent();
+            LerStringConexao();
         }
 
+        //sobrecarga metodo construtor
+        //quando vir do formulario consulta livros
         public Frm_Cadastrar_Livros(int cod)
         {
             InitializeComponent();
+            LerStringConexao();
             this.id = cod;
             buscaDados(this.id);
+
         }
 
+        private void LerStringConexao()
+        {
+            //caminho dos dados da string de conexao
+            string caminhoStringConexao = Application.StartupPath + "/stringConexao.txt";
+            StreamReader reader = new StreamReader(caminhoStringConexao);
+            //Lendo o arquivo de texto com os dados de login
+            string linha = reader.ReadLine();
+            this.Stringconexao = linha;
+        }
+
+        //exibir os dados na tela para alterar
         private void buscaDados(int cod)
         {
+            //conexao com o banco de dados
+            MySqlConnection conn = new MySqlConnection(this.Stringconexao);
             try
             {
-                //abrindo a conexao com o bd
+                //abrindo a conexao com o banco de dados
                 conn.Open();
 
                 if (conn.State == ConnectionState.Open)
                 {
-                    //consulta no bd
+                    //consulta no banco de dados
                     MySqlCommand comando = conn.CreateCommand();
                     string consulta = "SELECT * FROM LIVROS WHERE ID_LIVRO=" + cod + "";
                     comando.CommandText = consulta;
                     //retornando os dados da query
                     MySqlDataReader MysqlReader = comando.ExecuteReader();
-                    //Percorrendo a consulta e adicionando os valores em cada linha
+                    
+                    //Percorrendo a consulta 
+                    //adicionando cada valor da consulta no seu campo no formulario
+                    //de acordo com sua posicao no vetor
                     while (MysqlReader.Read())
                     {
                         object[] valores = new object[MysqlReader.FieldCount];
                         for (int i = 0; i < MysqlReader.FieldCount; i++)
                         {
+                            //cada dado da consulta em uma posicao do vetor
                             valores[i] = MysqlReader.GetValue(i);
                         }
                         txtCod.Text = valores[0].ToString();
@@ -59,7 +82,9 @@ namespace Gerenciamento_Biblioteca
                         txtEditora.Text = valores[5].ToString();
                         txtPaginas.Text = valores[6].ToString();
                         txtIsbn.Text = valores[8].ToString();
-
+                       
+                        //converte o status para char 
+                        //para poder ser comparado
                         char status = Convert.ToChar(valores[7]);
                         if (status == 'I')
                         {
@@ -84,6 +109,8 @@ namespace Gerenciamento_Biblioteca
         }
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            //conexao com o banco de dados
+            MySqlConnection conn = new MySqlConnection(this.Stringconexao);
             try
             {
                 Livros livro = new Livros();
@@ -134,7 +161,7 @@ namespace Gerenciamento_Biblioteca
                     }
                     else
                     {
-                        //comando para update no bd
+                        //comando para update no bancco de dados
                         MySqlCommand comando = conn.CreateCommand();
                         string consulta = "UPDATE LIVROS SET NOME_LIVRO=?NOME,AUTOR_LIVRO=?AUTOR,ANO_LIVRO=?ANO,GENERO_LIVRO=?GENERO,EDITORA_LIVRO=?EDITORA,PAGINAS_LIVRO=?PAGINAS,STATUS_LIVRO=?STATUS,ISBN_LIVRO=?ISBN WHERE ID_LIVRO=" + this.id + "";
                         comando.CommandText = consulta;
@@ -173,7 +200,7 @@ namespace Gerenciamento_Biblioteca
 
         private void txtAno_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //cancela o evento no campo letra e se nao for a tecla back
+            //cancela o evento no campo, se for letra e se nao for a tecla back
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true;
@@ -182,7 +209,7 @@ namespace Gerenciamento_Biblioteca
 
         private void txtPaginas_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //cancela o evento no campo letra e se nao for a tecla back
+            //cancela o evento no campo, se for letra e se nao for a tecla back
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true;
@@ -191,12 +218,14 @@ namespace Gerenciamento_Biblioteca
 
         private void txtIsbn_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //cancela o evento no campo letra e se nao for a tecla back
+            //cancela o evento no campo, se for letra e se nao for a tecla back
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true;
             }
         }
+
+        //limpar os campos no formulario
         private void LimparCampos()
         {
             txtNome.Clear();

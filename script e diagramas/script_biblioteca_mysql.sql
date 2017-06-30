@@ -1,3 +1,4 @@
+create user administrator identified by '1234';
 CREATE DATABASE BIBLIOTECA;
 USE BIBLIOTECA;
 

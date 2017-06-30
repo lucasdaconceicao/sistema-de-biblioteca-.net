@@ -19,6 +19,7 @@ namespace Gerenciamento_Biblioteca
 
         private void tsbtnSair_Click(object sender, EventArgs e)
         {
+            //botao sair
             if (MessageBox.Show("Você tem certeza que deseja sair do sistema?", "Mensagem do Sistema",
              MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -33,12 +34,14 @@ namespace Gerenciamento_Biblioteca
 
         private void tsbtnCadastrar_Click(object sender, EventArgs e)
         {
+            //iniciar formulario cadastrar clientes
             Frm_Cadastrar_Clientes objFrmCadastrarCliente = new Frm_Cadastrar_Clientes();
             objFrmCadastrarCliente.ShowDialog();
         }
 
         private void tsbtnConsultar_Click(object sender, EventArgs e)
         {
+            //iniciar formulario consulta clientes
             Frm_Consulta_Clientes objConsulta_Clientes = new Frm_Consulta_Clientes();
             objConsulta_Clientes.ShowDialog();
         }
