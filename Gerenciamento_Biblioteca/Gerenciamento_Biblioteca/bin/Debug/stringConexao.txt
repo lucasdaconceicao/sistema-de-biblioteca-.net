@@ -1,0 +1,1 @@
+Server=localhost;Port=3306;Database=BIBLIOTECA;Uid=administrator;Pwd=1234;

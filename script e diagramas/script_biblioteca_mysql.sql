@@ -1,4 +1,6 @@
-create user administrator identified by '1234';
+-- RODAR O SCRIPT EM UM USUARIO QUE TENHA PERMISSAO DE DBA
+CREATE USER 'administrator'@'localhost' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON * . * TO 'administrator'@'localhost';
 CREATE DATABASE BIBLIOTECA;
 USE BIBLIOTECA;
 
