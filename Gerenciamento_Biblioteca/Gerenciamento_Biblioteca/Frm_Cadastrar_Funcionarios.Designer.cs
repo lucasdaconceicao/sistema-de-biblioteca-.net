@@ -291,7 +291,7 @@
             this.MaximizeBox = false;
             this.Name = "Frm_Cadastrar_Funcionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastrar Funcionarios";
+            this.Text = "Cadastrar/Alterar Funcionarios";
             this.ResumeLayout(false);
             this.PerformLayout();
 

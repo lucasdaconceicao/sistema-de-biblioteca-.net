@@ -312,7 +312,7 @@
             this.MaximizeBox = false;
             this.Name = "Frm_Cadastrar_Livros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastrar Livros";
+            this.Text = "Cadastrar/Alterar Livros";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
