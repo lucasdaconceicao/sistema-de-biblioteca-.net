@@ -46,7 +46,6 @@
             this.txtBuscarLivro = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_livros)).BeginInit();
             this.SuspendLayout();
@@ -57,10 +56,11 @@
             this.txtBuscarUsuario.Name = "txtBuscarUsuario";
             this.txtBuscarUsuario.Size = new System.Drawing.Size(212, 20);
             this.txtBuscarUsuario.TabIndex = 0;
+            this.txtBuscarUsuario.TextChanged += new System.EventHandler(this.txtBuscarUsuario_TextChanged);
             // 
             // btn_buscar_usuario
             // 
-            this.btn_buscar_usuario.Location = new System.Drawing.Point(231, 33);
+            this.btn_buscar_usuario.Location = new System.Drawing.Point(222, 36);
             this.btn_buscar_usuario.Name = "btn_buscar_usuario";
             this.btn_buscar_usuario.Size = new System.Drawing.Size(75, 24);
             this.btn_buscar_usuario.TabIndex = 1;
@@ -129,7 +129,7 @@
             this.dgv_livros.ShowCellToolTips = false;
             this.dgv_livros.ShowEditingIcon = false;
             this.dgv_livros.ShowRowErrors = false;
-            this.dgv_livros.Size = new System.Drawing.Size(406, 301);
+            this.dgv_livros.Size = new System.Drawing.Size(418, 301);
             this.dgv_livros.TabIndex = 3;
             // 
             // ID_LIVRO
@@ -163,29 +163,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 15);
+            this.label1.Location = new System.Drawing.Point(1, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Digite o usuário";
+            this.label1.Text = "Digite o cliente:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(437, 17);
+            this.label2.Location = new System.Drawing.Point(433, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Digite o Livro";
+            this.label2.Text = "Digite o livro:";
             // 
             // btn_buscar_livro
             // 
-            this.btn_buscar_livro.Location = new System.Drawing.Point(675, 33);
+            this.btn_buscar_livro.Location = new System.Drawing.Point(660, 36);
             this.btn_buscar_livro.Name = "btn_buscar_livro";
             this.btn_buscar_livro.Size = new System.Drawing.Size(75, 23);
             this.btn_buscar_livro.TabIndex = 6;
             this.btn_buscar_livro.Text = "BUSCAR";
             this.btn_buscar_livro.UseVisualStyleBackColor = true;
+            this.btn_buscar_livro.Click += new System.EventHandler(this.btn_buscar_livro_Click);
             // 
             // txtBuscarLivro
             // 
@@ -196,40 +197,30 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnSalvar.Location = new System.Drawing.Point(751, 416);
+            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalvar.Location = new System.Drawing.Point(762, 370);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(91, 33);
             this.btnSalvar.TabIndex = 77;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Cyan;
-            this.btnCancelar.Location = new System.Drawing.Point(664, 416);
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.Location = new System.Drawing.Point(676, 370);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 33);
             this.btnCancelar.TabIndex = 76;
             this.btnCancelar.Text = "VOLTAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // btnExcluir
-            // 
-            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnExcluir.Location = new System.Drawing.Point(4, 416);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(80, 33);
-            this.btnExcluir.TabIndex = 86;
-            this.btnExcluir.Text = "EXCLUIR";
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            // 
             // Frm_Cadastrar_Emprestimo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 461);
-            this.Controls.Add(this.btnExcluir);
+            this.ClientSize = new System.Drawing.Size(859, 409);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label2);
@@ -272,6 +263,5 @@
         private System.Windows.Forms.TextBox txtBuscarLivro;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnExcluir;
     }
 }
