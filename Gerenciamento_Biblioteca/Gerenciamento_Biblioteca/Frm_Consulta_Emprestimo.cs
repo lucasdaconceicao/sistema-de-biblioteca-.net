@@ -32,7 +32,7 @@ namespace Gerenciamento_Biblioteca
             this.Stringconexao = linha;
         }
 
-        private void getBooks()
+        private void getEmprestimos()
         {
             MySqlConnection conn = new MySqlConnection(this.Stringconexao);
             try
@@ -75,7 +75,7 @@ namespace Gerenciamento_Biblioteca
                     }
 
                     //Limpa os dados da grid
-                    dataGridView1.Rows.Clear();
+                    dgvEmprestimos.Rows.Clear();
 
                     //Percorrendo a consulta e adicionando os valores em cada linha
                     while (MysqlReader.Read())
@@ -85,7 +85,7 @@ namespace Gerenciamento_Biblioteca
                         {
                             valores[i] = MysqlReader.GetValue(i);
                         }
-                        dataGridView1.Rows.Add(valores);
+                        dgvEmprestimos.Rows.Add(valores);
                     }
                 }
             }
@@ -101,7 +101,7 @@ namespace Gerenciamento_Biblioteca
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            getBooks();
+            getEmprestimos();
         }
 
         private void btnRenovar_Click(object sender, EventArgs e)
@@ -110,7 +110,7 @@ namespace Gerenciamento_Biblioteca
             bool insertOk = true;
             try
             {
-                int locCod = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                int locCod = Convert.ToInt32(dgvEmprestimos.CurrentRow.Cells[0].Value.ToString());
             }
             catch (Exception)
             {
@@ -124,19 +124,19 @@ namespace Gerenciamento_Biblioteca
                     conn.Open();
                     if (conn.State == ConnectionState.Open)
                     {
-                        int locCod = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                        int locCod = Convert.ToInt32(dgvEmprestimos.CurrentRow.Cells[0].Value.ToString());
 
                         MySqlCommand comando = conn.CreateCommand();
-                        string insert = "UPDATE LOCACAO " +
+                        string update = "UPDATE LOCACAO " +
                             "SET DATA_DEVOLUCAO = DATA_DEVOLUCAO + INTERVAL 4 DAY WHERE ID_LOCACAO = " + locCod + ";";
 
-                        comando.CommandText = insert;
+                        comando.CommandText = update;
 
                         if (comando.ExecuteNonQuery() > 0)
                         {
                             MessageBox.Show("Renovacao realzada com sucesso!");
-                            dataGridView1.Rows.Clear();
-                            getBooks();
+                            dgvEmprestimos.Rows.Clear();
+                            getEmprestimos();
                         }
                     }
                 }

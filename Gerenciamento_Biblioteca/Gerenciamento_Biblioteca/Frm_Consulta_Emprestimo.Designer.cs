@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Consulta_Emprestimo));
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEmprestimos = new System.Windows.Forms.DataGridView();
             this.COD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOME_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOME_LIVRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,7 +40,7 @@
             this.btnRenovar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmprestimos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBusca
@@ -62,27 +62,27 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dataGridView1
+            // dgvEmprestimos
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvEmprestimos.AllowUserToAddRows = false;
+            this.dgvEmprestimos.AllowUserToDeleteRows = false;
+            this.dgvEmprestimos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmprestimos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.COD,
             this.NOME_CLIENTE,
             this.NOME_LIVRO,
             this.DATA_ALUGADA,
             this.DATA_DEVOLUCAO});
-            this.dataGridView1.Location = new System.Drawing.Point(2, 54);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.ShowCellErrors = false;
-            this.dataGridView1.ShowCellToolTips = false;
-            this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(771, 312);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvEmprestimos.Location = new System.Drawing.Point(2, 54);
+            this.dgvEmprestimos.MultiSelect = false;
+            this.dgvEmprestimos.Name = "dgvEmprestimos";
+            this.dgvEmprestimos.ReadOnly = true;
+            this.dgvEmprestimos.ShowCellErrors = false;
+            this.dgvEmprestimos.ShowCellToolTips = false;
+            this.dgvEmprestimos.ShowEditingIcon = false;
+            this.dgvEmprestimos.ShowRowErrors = false;
+            this.dgvEmprestimos.Size = new System.Drawing.Size(771, 312);
+            this.dgvEmprestimos.TabIndex = 2;
             // 
             // COD
             // 
@@ -162,7 +162,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRenovar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvEmprestimos);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBusca);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -171,7 +171,7 @@
             this.Name = "Frm_Consulta_Emprestimo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Emprestimos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmprestimos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,7 +181,7 @@
 
         private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEmprestimos;
         private System.Windows.Forms.Button btnRenovar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label1;

@@ -57,7 +57,7 @@ namespace Gerenciamento_Biblioteca
                 {
                     //consulta no bd
                     MySqlCommand comando = conn.CreateCommand();
-                    string consulta = "SELECT * FROM CLIENTES WHERE NOME_CLIENTE LIKE'%" + txtBuscarUsuario.Text + "%'";
+                    string consulta = "SELECT ID_CLIENTE,NOME_CLIENTE,TELEFONE_CLIENTE FROM CLIENTES WHERE NOME_CLIENTE LIKE'%" + txtBuscarUsuario.Text + "%'";
                     comando.CommandText = consulta;
 
                     //retornando os dados da query
@@ -120,7 +120,7 @@ namespace Gerenciamento_Biblioteca
                 {
                     //consulta no bd
                     MySqlCommand comando = conn.CreateCommand();
-                    string consulta = "SELECT * FROM LIVROS WHERE NOME_LIVRO LIKE'%" + txtBuscarLivro.Text + "%'";
+                    string consulta = "SELECT ID_LIVRO,NOME_LIVRO,ANO_LIVRO,ISBN_LIVRO FROM LIVROS WHERE NOME_LIVRO LIKE'%" + txtBuscarLivro.Text + "%'";
                     comando.CommandText = consulta;
 
                     //retornando os dados da query
