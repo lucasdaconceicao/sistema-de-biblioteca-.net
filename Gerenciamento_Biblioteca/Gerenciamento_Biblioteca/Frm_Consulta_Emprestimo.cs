@@ -30,7 +30,6 @@ namespace Gerenciamento_Biblioteca
             //Lendo o arquivo de texto com os dados de login
             string linha = reader.ReadLine();
             this.Stringconexao = linha;
-
         }
 
         private void getBooks()
@@ -105,17 +104,7 @@ namespace Gerenciamento_Biblioteca
             getBooks();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txtBusca_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnRenovar_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection(this.Stringconexao);
             bool insertOk = true;
@@ -125,7 +114,6 @@ namespace Gerenciamento_Biblioteca
             }
             catch (Exception)
             {
-
                 insertOk = false;
             }
 
@@ -136,7 +124,6 @@ namespace Gerenciamento_Biblioteca
                     conn.Open();
                     if (conn.State == ConnectionState.Open)
                     {
-
                         int locCod = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString());
 
                         MySqlCommand comando = conn.CreateCommand();
@@ -151,7 +138,6 @@ namespace Gerenciamento_Biblioteca
                             dataGridView1.Rows.Clear();
                             getBooks();
                         }
-
                     }
                 }
                 catch (Exception ex)
@@ -169,9 +155,9 @@ namespace Gerenciamento_Biblioteca
             }
         }
 
-        private void Frm_Consulta_Emprestimo_Load(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Dispose();
         }
     }
 }

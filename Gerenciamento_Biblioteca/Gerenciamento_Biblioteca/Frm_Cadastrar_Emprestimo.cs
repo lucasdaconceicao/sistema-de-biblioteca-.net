@@ -32,7 +32,6 @@ namespace Gerenciamento_Biblioteca
             //Lendo o arquivo de texto com os dados de login
             string linha = reader.ReadLine();
             this.Stringconexao = linha;
-
         }
 
         private void getCli()
@@ -149,7 +148,7 @@ namespace Gerenciamento_Biblioteca
                         dgv_livros.Rows.Add(valores);
                     }
                 }
-                txtBuscarUsuario.Clear();
+                txtBuscarLivro.Clear();
             }
             catch (Exception ex)
             {
@@ -164,11 +163,6 @@ namespace Gerenciamento_Biblioteca
         private void btn_buscar_usuario_Click(object sender, EventArgs e)
         {
             getCli();
-        }
-
-        private void txtBuscarUsuario_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_buscar_livro_Click(object sender, EventArgs e)
@@ -215,7 +209,6 @@ namespace Gerenciamento_Biblioteca
                             dgv_livros.Rows.Clear();
                             dgv_usuarios.Rows.Clear();
                         }
-
                     }
                 }
                 catch (Exception ex)
@@ -231,6 +224,11 @@ namespace Gerenciamento_Biblioteca
             {
                 MessageBox.Show("Selecione um livro e um cliente!");
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
